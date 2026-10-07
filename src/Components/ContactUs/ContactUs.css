@@ -1,0 +1,842 @@
+/* =========================================================
+   MANGALORE HYDRO TESTING
+   CONTACT US
+   ========================================================= */
+
+.mht-contact {
+  position: relative;
+  width: 100%;
+  padding: 100px 22px 110px;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(0, 166, 81, 0.055),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(244, 211, 94, 0.045),
+      transparent 30%
+    ),
+    #101820;
+
+  overflow: hidden;
+
+  font-family: Cambria, Georgia, serif;
+}
+
+.mht-contact *,
+.mht-contact *::before,
+.mht-contact *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.mht-contact__header {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.mht-contact__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.mht-contact__eyebrow span {
+  width: 40px;
+  height: 2px;
+
+  display: block;
+
+  background: #00a651;
+}
+
+.mht-contact__eyebrow p {
+  margin: 0;
+
+  color: #f4d35e;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.mht-contact__header h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 50px;
+  line-height: 1.1;
+
+  font-weight: 700;
+}
+
+.mht-contact__header h2 span {
+  color: #00a651;
+}
+
+.mht-contact__header > p {
+  max-width: 820px;
+
+  margin: 22px auto 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.mht-contact__container {
+  width: 100%;
+  max-width: 1360px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 60px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+   ========================================================= */
+
+.mht-contact__left {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   CONTACT CARD
+   ========================================================= */
+
+.mht-contact__card {
+  width: 100%;
+  min-height: 132px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 26px 30px;
+
+  background: #1b252d;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: 12px;
+
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.mht-contact__card:hover {
+  background: #202c34;
+
+  border-color: rgba(0, 166, 81, 0.40);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CONTACT ICON
+   ========================================================= */
+
+.mht-contact__icon {
+  width: 60px;
+  height: 60px;
+
+  flex: 0 0 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #00a651;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+}
+
+.mht-contact__icon svg {
+  width: 31px;
+  height: 31px;
+
+  display: block;
+}
+
+
+/* =========================================================
+   CONTACT CONTENT
+   ========================================================= */
+
+.mht-contact__card-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.mht-contact__card-content h3 {
+  margin: 0;
+
+  color: #f4d35e;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.mht-contact__card-content p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.90);
+
+  font-size: 17px;
+
+  line-height: 1.65;
+}
+
+.mht-contact__card-content a {
+  width: fit-content;
+
+  color: #ffffff;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.mht-contact__card-content a:hover {
+  color: #00a651;
+}
+
+
+/* =========================================================
+   PHONE LIST
+   ========================================================= */
+
+.mht-contact__phone-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+/* =========================================================
+   CALL BUTTON
+   ========================================================= */
+
+.mht-contact__call-button {
+  width: 100%;
+  min-height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  margin-top: 2px;
+
+  background: #00a651;
+
+  border: 2px solid #00a651;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.mht-contact__call-button svg {
+  width: 23px;
+  height: 23px;
+}
+
+.mht-contact__call-button:hover {
+  background: #008f46;
+
+  border-color: #008f46;
+
+  transform: translateY(-2px);
+}
+
+.mht-contact__button-arrow {
+  font-size: 20px;
+
+  margin-left: 3px;
+}
+
+
+/* =========================================================
+   FORM WRAPPER
+   ========================================================= */
+
+.mht-contact__form-wrapper {
+  width: 100%;
+
+  padding: 36px 40px 40px;
+
+  background: #1b252d;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.mht-contact__form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.mht-contact__field {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.mht-contact__field label {
+  color: #ffffff;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 16px;
+
+  line-height: 1.4;
+}
+
+.mht-contact__field input,
+.mht-contact__field select,
+.mht-contact__field textarea {
+  width: 100%;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 7px;
+
+  background: #182127;
+
+  color: #ffffff;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.mht-contact__field input,
+.mht-contact__field select {
+  height: 60px;
+
+  padding: 0 20px;
+}
+
+.mht-contact__field textarea {
+  min-height: 128px;
+
+  padding: 17px 20px;
+
+  resize: vertical;
+}
+
+.mht-contact__field input::placeholder,
+.mht-contact__field textarea::placeholder {
+  color: #7f91a4;
+
+  opacity: 1;
+}
+
+.mht-contact__field select {
+  appearance: auto;
+
+  cursor: pointer;
+}
+
+.mht-contact__field select option {
+  background: #182127;
+
+  color: #ffffff;
+
+  font-family: Cambria, Georgia, serif;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.mht-contact__field input:focus,
+.mht-contact__field select:focus,
+.mht-contact__field textarea:focus {
+  border-color: #00a651;
+
+  background: #1c272e;
+
+  box-shadow:
+    0 0 0 3px rgba(0, 166, 81, 0.13);
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.mht-contact__submit {
+  width: 100%;
+  min-height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 2px;
+
+  padding: 0 25px;
+
+  border: 2px solid #00a651;
+
+  border-radius: 7px;
+
+  background: #00a651;
+
+  color: #ffffff;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.mht-contact__submit svg {
+  width: 22px;
+  height: 22px;
+}
+
+.mht-contact__submit:hover {
+  background: #008f46;
+
+  border-color: #008f46;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 166, 81, 0.20);
+}
+
+.mht-contact__submit-arrow {
+  font-size: 20px;
+
+  margin-left: 2px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1600px) {
+
+  .mht-contact {
+    padding-top: 120px;
+    padding-bottom: 125px;
+  }
+
+  .mht-contact__header h2 {
+    font-size: 56px;
+  }
+
+  .mht-contact__container {
+    max-width: 1500px;
+
+    gap: 70px;
+  }
+
+  .mht-contact__card {
+    min-height: 140px;
+
+    padding: 28px 32px;
+  }
+
+  .mht-contact__form-wrapper {
+    padding: 42px 45px 45px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .mht-contact {
+    padding: 85px 20px 95px;
+  }
+
+  .mht-contact__header {
+    margin-bottom: 55px;
+  }
+
+  .mht-contact__header h2 {
+    font-size: 44px;
+  }
+
+  .mht-contact__container {
+    gap: 35px;
+  }
+
+  .mht-contact__card {
+    gap: 18px;
+
+    padding: 22px;
+  }
+
+  .mht-contact__icon {
+    width: 55px;
+    height: 55px;
+
+    flex-basis: 55px;
+  }
+
+  .mht-contact__form-wrapper {
+    padding: 30px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .mht-contact {
+    padding: 75px 18px 85px;
+  }
+
+  .mht-contact__header {
+    margin-bottom: 45px;
+  }
+
+  .mht-contact__header h2 {
+    font-size: 40px;
+  }
+
+  .mht-contact__header > p {
+    font-size: 17px;
+  }
+
+  .mht-contact__container {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .mht-contact__left {
+    gap: 20px;
+  }
+
+  .mht-contact__form-wrapper {
+    padding: 30px 25px 32px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .mht-contact {
+    padding: 65px 14px 75px;
+  }
+
+  .mht-contact__eyebrow {
+    gap: 9px;
+  }
+
+  .mht-contact__eyebrow span {
+    width: 25px;
+  }
+
+  .mht-contact__eyebrow p {
+    font-size: 11px;
+
+    letter-spacing: 1.7px;
+  }
+
+  .mht-contact__header h2 {
+    font-size: 34px;
+  }
+
+  .mht-contact__header > p {
+    margin-top: 17px;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+
+  .mht-contact__header {
+    margin-bottom: 38px;
+  }
+
+
+  /* Contact Cards */
+
+  .mht-contact__card {
+    min-height: 0;
+
+    align-items: flex-start;
+
+    padding: 20px;
+
+    gap: 15px;
+  }
+
+  .mht-contact__icon {
+    width: 50px;
+    height: 50px;
+
+    flex: 0 0 50px;
+  }
+
+  .mht-contact__icon svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .mht-contact__card-content {
+    gap: 7px;
+  }
+
+  .mht-contact__card-content h3 {
+    font-size: 12px;
+
+    letter-spacing: 1.7px;
+  }
+
+  .mht-contact__card-content p,
+  .mht-contact__card-content a {
+    font-size: 15px;
+
+    line-height: 1.55;
+  }
+
+
+  /* Form */
+
+  .mht-contact__form-wrapper {
+    padding: 25px 18px 22px;
+
+    border-radius: 10px;
+  }
+
+  .mht-contact__form {
+    gap: 19px;
+  }
+
+  .mht-contact__field {
+    gap: 8px;
+  }
+
+  .mht-contact__field label {
+    font-size: 15px;
+  }
+
+  .mht-contact__field input,
+  .mht-contact__field select {
+    height: 55px;
+
+    padding: 0 16px;
+
+    font-size: 15px;
+  }
+
+  .mht-contact__field textarea {
+    min-height: 120px;
+
+    padding: 15px 16px;
+
+    font-size: 15px;
+  }
+
+  .mht-contact__submit {
+    min-height: 57px;
+
+    font-size: 15px;
+  }
+
+  .mht-contact__call-button {
+    min-height: 57px;
+
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .mht-contact {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .mht-contact__header h2 {
+    font-size: 30px;
+  }
+
+  .mht-contact__card {
+    padding: 17px;
+  }
+
+  .mht-contact__icon {
+    width: 46px;
+    height: 46px;
+
+    flex-basis: 46px;
+  }
+
+  .mht-contact__card-content p,
+  .mht-contact__card-content a {
+    font-size: 14px;
+  }
+
+  .mht-contact__form-wrapper {
+    padding: 22px 15px;
+  }
+
+  .mht-contact__submit span:last-child,
+  .mht-contact__button-arrow {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .mht-contact *,
+  .mht-contact *::before,
+  .mht-contact *::after {
+    transition: none !important;
+  }
+}

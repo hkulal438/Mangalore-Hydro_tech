@@ -1,0 +1,1056 @@
+/* =========================================================
+   MANGALORE HYDRO TECH
+   WHAT WE OFFER
+========================================================= */
+
+.mht-offer {
+  width: 100%;
+  padding: 110px 0 120px;
+
+  background: #ffffff;
+  color: #34495e;
+
+  font-family: Cambria, Georgia, serif;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.mht-offer__container {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+  padding: 0 35px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.mht-offer__heading {
+  max-width: 1000px;
+
+  margin: 0 auto 58px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.mht-offer__eyebrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  margin-bottom: 22px;
+
+  color: #00a651;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 2.8px;
+  line-height: 1.2;
+}
+
+.mht-offer__eyebrow span {
+  display: block;
+
+  width: 42px;
+  height: 2px;
+
+  flex-shrink: 0;
+
+  background: #00a651;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.mht-offer__heading h2 {
+  margin: 0;
+  padding: 0;
+
+  color: #34495e;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: clamp(40px, 4vw, 56px);
+
+  font-weight: 700;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.6px;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.mht-offer__heading p {
+  max-width: 720px;
+
+  margin: 20px auto 0;
+
+  color: rgba(52, 73, 94, 0.78);
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   SERVICE GRID
+========================================================= */
+
+.mht-offer__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.mht-offer__card {
+  position: relative;
+
+  min-width: 0;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(52, 73, 94, 0.13);
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 25px rgba(52, 73, 94, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.mht-offer__card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(0, 166, 81, 0.4);
+
+  box-shadow:
+    0 20px 42px rgba(52, 73, 94, 0.15);
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.mht-offer__image-wrap {
+  position: relative;
+
+  width: 100%;
+  height: 275px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #eef2f3;
+}
+
+
+/* =========================================================
+   NORMAL SERVICE IMAGES
+========================================================= */
+
+.mht-offer__image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  /*
+    Prioritize the upper part of the image
+    so technician faces remain visible.
+  */
+  object-position: center top;
+
+  transition:
+    transform 0.6s ease;
+}
+
+
+/* =========================================================
+   NORMAL IMAGE HOVER
+========================================================= */
+
+.mht-offer__card:hover .mht-offer__image {
+  transform: scale(1.035);
+}
+
+
+/* =========================================================
+   CERTIFICATION IMAGE — CARD 8
+========================================================= */
+
+/*
+   The certification image is portrait-oriented.
+
+   IMPORTANT:
+   We use COVER here instead of CONTAIN so the image
+   completely fills the card and there is no empty
+   grey/white area around it.
+*/
+
+.mht-offer__card:nth-child(8)
+.mht-offer__image-wrap {
+  height: 275px;
+
+  padding: 0;
+
+  background: #eef2f3;
+
+  overflow: hidden;
+}
+
+
+/*
+   Full card coverage
+*/
+
+.mht-offer__card:nth-child(8)
+.mht-offer__image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  /*
+    Keep the central subject visible.
+  */
+  object-position: center center;
+
+  transform: none;
+
+  border-radius: 0;
+}
+
+
+/*
+   Very small controlled hover zoom.
+   This prevents excessive cropping.
+*/
+
+.mht-offer__card:nth-child(8):hover
+.mht-offer__image {
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.mht-offer__image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 52%,
+      rgba(16, 42, 67, 0.20) 100%
+    );
+}
+
+
+/*
+   Certification image gets a very subtle overlay.
+*/
+
+.mht-offer__card:nth-child(8)
+.mht-offer__image-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(16, 42, 67, 0.08) 100%
+    );
+}
+
+
+/* =========================================================
+   IMAGE BOTTOM GREEN ACCENT
+========================================================= */
+
+.mht-offer__image-wrap::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: #00a651;
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.mht-offer__card:hover
+.mht-offer__image-wrap::after {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.mht-offer__content {
+  padding: 25px 24px 27px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.mht-offer__content h3 {
+  margin: 0;
+
+  color: #34495e;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  line-height: 1.28;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.mht-offer__content p {
+  margin: 13px 0 0;
+
+  color: rgba(52, 73, 94, 0.76);
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.58;
+}
+
+
+/* =========================================================
+   BOTTOM ACCENT
+========================================================= */
+
+.mht-offer__accent {
+  display: block;
+
+  width: 55px;
+  height: 3px;
+
+  margin-top: 20px;
+
+  background: #00a651;
+
+  border-radius: 10px;
+
+  transition:
+    width 0.35s ease,
+    background 0.35s ease;
+}
+
+.mht-offer__card:hover
+.mht-offer__accent {
+  width: 90px;
+
+  background: #f4d35e;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .mht-offer {
+    padding: 125px 0 135px;
+  }
+
+  .mht-offer__container {
+    max-width: 1580px;
+  }
+
+  .mht-offer__heading {
+    margin-bottom: 65px;
+  }
+
+  .mht-offer__grid {
+    gap: 28px;
+  }
+
+  .mht-offer__image-wrap {
+    height: 295px;
+  }
+
+  .mht-offer__content {
+    padding: 28px 27px 30px;
+  }
+
+  .mht-offer__content h3 {
+    font-size: 24px;
+  }
+
+  .mht-offer__content p {
+    font-size: 16px;
+  }
+
+
+  /* Certification */
+
+  .mht-offer__card:nth-child(8)
+  .mht-offer__image-wrap {
+    height: 295px;
+
+    padding: 0;
+  }
+
+  .mht-offer__card:nth-child(8)
+  .mht-offer__image {
+    object-fit: cover;
+
+    object-position: center center;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .mht-offer {
+    padding: 90px 0 100px;
+  }
+
+  .mht-offer__container {
+    padding: 0 30px;
+  }
+
+  .mht-offer__heading {
+    margin-bottom: 50px;
+  }
+
+  .mht-offer__grid {
+    gap: 20px;
+  }
+
+  .mht-offer__image-wrap {
+    height: 255px;
+  }
+
+  .mht-offer__content {
+    padding: 22px 20px 25px;
+  }
+
+  .mht-offer__content h3 {
+    font-size: 20px;
+  }
+
+  .mht-offer__content p {
+    font-size: 14px;
+  }
+
+
+  /* Certification */
+
+  .mht-offer__card:nth-child(8)
+  .mht-offer__image-wrap {
+    height: 255px;
+
+    padding: 0;
+  }
+
+  .mht-offer__card:nth-child(8)
+  .mht-offer__image {
+    object-fit: cover;
+
+    object-position: center center;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .mht-offer {
+    padding: 80px 0 90px;
+  }
+
+  .mht-offer__container {
+    padding: 0 24px;
+  }
+
+  .mht-offer__heading {
+    max-width: 760px;
+
+    margin-bottom: 45px;
+  }
+
+  .mht-offer__heading h2 {
+    font-size: 42px;
+  }
+
+  .mht-offer__heading p {
+    font-size: 16px;
+  }
+
+  .mht-offer__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+  }
+
+  .mht-offer__image-wrap {
+    height: 285px;
+  }
+
+  .mht-offer__content {
+    padding: 23px 23px 27px;
+  }
+
+  .mht-offer__content h3 {
+    font-size: 22px;
+  }
+
+  .mht-offer__content p {
+    font-size: 15px;
+  }
+
+
+  /* Certification */
+
+  .mht-offer__card:nth-child(8)
+  .mht-offer__image-wrap {
+    height: 285px;
+
+    padding: 0;
+  }
+
+  .mht-offer__card:nth-child(8)
+  .mht-offer__image {
+    object-fit: cover;
+
+    object-position: center center;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .mht-offer {
+    padding: 70px 0 80px;
+  }
+
+  .mht-offer__container {
+    padding: 0 20px;
+  }
+
+
+  /* -----------------------------------------
+     HEADING
+  ----------------------------------------- */
+
+  .mht-offer__heading {
+    margin-bottom: 40px;
+  }
+
+  .mht-offer__eyebrow {
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .mht-offer__eyebrow span {
+    width: 30px;
+  }
+
+  .mht-offer__heading h2 {
+    font-size: 34px;
+
+    line-height: 1.1;
+  }
+
+  .mht-offer__heading p {
+    margin-top: 17px;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+  }
+
+  .mht-offer__desktop-break {
+    display: none;
+  }
+
+
+  /* -----------------------------------------
+     GRID
+  ----------------------------------------- */
+
+  .mht-offer__grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  /* -----------------------------------------
+     CARD
+  ----------------------------------------- */
+
+  .mht-offer__card {
+    border-radius: 9px;
+  }
+
+
+  /* -----------------------------------------
+     NORMAL IMAGES
+  ----------------------------------------- */
+
+  .mht-offer__image-wrap {
+    height: 285px;
+  }
+
+  .mht-offer__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+  }
+
+
+  /* -----------------------------------------
+     CERTIFICATION IMAGE
+  ----------------------------------------- */
+
+  .mht-offer__card:nth-child(8)
+  .mht-offer__image-wrap {
+    height: 285px;
+
+    padding: 0;
+
+    background: #eef2f3;
+
+    overflow: hidden;
+  }
+
+  .mht-offer__card:nth-child(8)
+  .mht-offer__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    transform: none;
+
+    border-radius: 0;
+  }
+
+  .mht-offer__card:nth-child(8):hover
+  .mht-offer__image {
+    transform: scale(1.02);
+  }
+
+
+  /* -----------------------------------------
+     CONTENT
+  ----------------------------------------- */
+
+  .mht-offer__content {
+    padding: 22px 21px 25px;
+  }
+
+  .mht-offer__content h3 {
+    font-size: 21px;
+
+    line-height: 1.25;
+  }
+
+  .mht-offer__content p {
+    margin-top: 11px;
+
+    font-size: 14.5px;
+
+    line-height: 1.55;
+  }
+
+  .mht-offer__accent {
+    margin-top: 18px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .mht-offer {
+    padding: 60px 0 70px;
+  }
+
+  .mht-offer__container {
+    padding: 0 16px;
+  }
+
+
+  /* -----------------------------------------
+     HEADING
+  ----------------------------------------- */
+
+  .mht-offer__heading {
+    margin-bottom: 34px;
+  }
+
+  .mht-offer__eyebrow {
+    gap: 8px;
+
+    margin-bottom: 16px;
+
+    font-size: 8.5px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .mht-offer__eyebrow span {
+    width: 25px;
+  }
+
+  .mht-offer__heading h2 {
+    font-size: 30px;
+
+    line-height: 1.12;
+  }
+
+  .mht-offer__heading p {
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+  }
+
+
+  /* -----------------------------------------
+     GRID
+  ----------------------------------------- */
+
+  .mht-offer__grid {
+    gap: 17px;
+  }
+
+
+  /* -----------------------------------------
+     CARD
+  ----------------------------------------- */
+
+  .mht-offer__card {
+    border-radius: 8px;
+  }
+
+
+  /* -----------------------------------------
+     NORMAL IMAGES
+  ----------------------------------------- */
+
+  .mht-offer__image-wrap {
+    height: 285px;
+  }
+
+  .mht-offer__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+  }
+
+
+  /* -----------------------------------------
+     CERTIFICATION IMAGE
+  ----------------------------------------- */
+
+  .mht-offer__card:nth-child(8)
+  .mht-offer__image-wrap {
+    height: 285px;
+
+    padding: 0;
+
+    background: #eef2f3;
+  }
+
+  .mht-offer__card:nth-child(8)
+  .mht-offer__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    transform: none;
+  }
+
+  .mht-offer__card:nth-child(8):hover
+  .mht-offer__image {
+    transform: scale(1.02);
+  }
+
+
+  /* -----------------------------------------
+     CONTENT
+  ----------------------------------------- */
+
+  .mht-offer__content {
+    padding: 20px 18px 23px;
+  }
+
+  .mht-offer__content h3 {
+    font-size: 19px;
+
+    line-height: 1.25;
+  }
+
+  .mht-offer__content p {
+    margin-top: 9px;
+
+    font-size: 13.5px;
+
+    line-height: 1.55;
+  }
+
+  .mht-offer__accent {
+    width: 50px;
+
+    height: 3px;
+
+    margin-top: 16px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .mht-offer {
+    padding: 52px 0 60px;
+  }
+
+  .mht-offer__container {
+    padding: 0 14px;
+  }
+
+
+  /* -----------------------------------------
+     HEADING
+  ----------------------------------------- */
+
+  .mht-offer__heading {
+    margin-bottom: 30px;
+  }
+
+  .mht-offer__eyebrow {
+    margin-bottom: 14px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.15px;
+  }
+
+  .mht-offer__eyebrow span {
+    width: 23px;
+  }
+
+  .mht-offer__heading h2 {
+    font-size: 27px;
+  }
+
+  .mht-offer__heading p {
+    font-size: 13.5px;
+  }
+
+
+  /* -----------------------------------------
+     NORMAL IMAGE
+  ----------------------------------------- */
+
+  .mht-offer__image-wrap {
+    height: 265px;
+  }
+
+  .mht-offer__image {
+    object-fit: cover;
+
+    object-position: center top;
+  }
+
+
+  /* -----------------------------------------
+     CERTIFICATION IMAGE
+  ----------------------------------------- */
+
+  .mht-offer__card:nth-child(8)
+  .mht-offer__image-wrap {
+    height: 265px;
+
+    padding: 0;
+
+    background: #eef2f3;
+  }
+
+  .mht-offer__card:nth-child(8)
+  .mht-offer__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    transform: none;
+  }
+
+  .mht-offer__card:nth-child(8):hover
+  .mht-offer__image {
+    transform: scale(1.02);
+  }
+
+
+  /* -----------------------------------------
+     CONTENT
+  ----------------------------------------- */
+
+  .mht-offer__content {
+    padding: 18px 15px 21px;
+  }
+
+  .mht-offer__content h3 {
+    font-size: 17px;
+  }
+
+  .mht-offer__content p {
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+  .mht-offer__accent {
+    width: 45px;
+
+    margin-top: 15px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .mht-offer__card,
+  .mht-offer__image,
+  .mht-offer__image-wrap::after,
+  .mht-offer__accent {
+    transition: none;
+  }
+}

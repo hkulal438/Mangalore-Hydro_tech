@@ -1,0 +1,828 @@
+/* =========================================================
+   MANGALORE HYDRO TECH
+   WHY CHOOSE US
+========================================================= */
+
+.mht-why {
+  width: 100%;
+
+  padding: 105px 0 110px;
+
+  background: #34495e;
+
+  color: #ffffff;
+
+  font-family: Cambria, Georgia, serif;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.mht-why__container {
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 0 35px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.mht-why__heading {
+  max-width: 900px;
+
+  margin: 0 auto 65px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.mht-why__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  margin-bottom: 24px;
+
+  color: #f4d35e;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.8px;
+
+  line-height: 1.2;
+}
+
+.mht-why__eyebrow span {
+  display: block;
+
+  width: 40px;
+
+  height: 2px;
+
+  flex-shrink: 0;
+
+  background: #00a651;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.mht-why__heading h2 {
+  margin: 0;
+
+  padding: 0;
+
+  color: #ffffff;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: clamp(40px, 4vw, 58px);
+
+  font-weight: 700;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.7px;
+}
+
+
+/* =========================================================
+   INTRO TEXT
+========================================================= */
+
+.mht-why__heading p {
+  max-width: 720px;
+
+  margin: 22px auto 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CARDS GRID
+========================================================= */
+
+.mht-why__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.mht-why__card {
+  min-height: 205px;
+
+  padding: 40px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 26px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: 10px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.mht-why__card:hover {
+  transform: translateY(-5px);
+
+  background: rgba(255, 255, 255, 0.095);
+
+  border-color: rgba(244, 211, 94, 0.45);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   ICON BOX
+========================================================= */
+
+.mht-why__icon {
+  width: 70px;
+
+  height: 70px;
+
+  min-width: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(0, 166, 81, 0.05);
+
+  border: 1px solid rgba(0, 166, 81, 0.55);
+
+  border-radius: 7px;
+
+  color: #00a651;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* =========================================================
+   ICON SVG
+========================================================= */
+
+.mht-why__icon svg {
+  width: 32px;
+
+  height: 32px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   ICON HOVER
+========================================================= */
+
+.mht-why__card:hover .mht-why__icon {
+  background: #00a651;
+
+  border-color: #00a651;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.mht-why__card-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.mht-why__card h3 {
+  margin: 2px 0 0;
+
+  color: #ffffff;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.mht-why__card p {
+  margin: 18px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .mht-why {
+    padding: 125px 0 130px;
+  }
+
+  .mht-why__container {
+    max-width: 1580px;
+  }
+
+  .mht-why__heading {
+    margin-bottom: 72px;
+  }
+
+  .mht-why__card {
+    min-height: 220px;
+
+    padding: 42px;
+  }
+
+  .mht-why__card h3 {
+    font-size: 26px;
+  }
+
+  .mht-why__card p {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .mht-why {
+    padding: 90px 0 95px;
+  }
+
+  .mht-why__container {
+    padding: 0 30px;
+  }
+
+  .mht-why__heading {
+    margin-bottom: 55px;
+  }
+
+  .mht-why__card {
+    min-height: 195px;
+
+    padding: 32px;
+
+    gap: 22px;
+  }
+
+  .mht-why__icon {
+    width: 64px;
+
+    height: 64px;
+
+    min-width: 64px;
+  }
+
+  .mht-why__icon svg {
+    width: 29px;
+
+    height: 29px;
+  }
+
+  .mht-why__card h3 {
+    font-size: 22px;
+  }
+
+  .mht-why__card p {
+    margin-top: 14px;
+
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .mht-why {
+    padding: 80px 0 85px;
+  }
+
+  .mht-why__container {
+    padding: 0 24px;
+  }
+
+  .mht-why__heading {
+    max-width: 720px;
+
+    margin-bottom: 45px;
+  }
+
+  .mht-why__heading h2 {
+    font-size: 42px;
+  }
+
+  .mht-why__heading p {
+    font-size: 16px;
+  }
+
+  .mht-why__grid {
+    gap: 20px;
+  }
+
+  .mht-why__card {
+    min-height: 185px;
+
+    padding: 26px;
+
+    gap: 18px;
+  }
+
+  .mht-why__icon {
+    width: 58px;
+
+    height: 58px;
+
+    min-width: 58px;
+  }
+
+  .mht-why__icon svg {
+    width: 27px;
+
+    height: 27px;
+  }
+
+  .mht-why__card h3 {
+    font-size: 20px;
+  }
+
+  .mht-why__card p {
+    margin-top: 12px;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .mht-why {
+    padding: 70px 0 75px;
+  }
+
+  .mht-why__container {
+    padding: 0 20px;
+  }
+
+
+  /* -----------------------------------------
+     HEADING
+  ----------------------------------------- */
+
+  .mht-why__heading {
+    margin-bottom: 42px;
+  }
+
+  .mht-why__eyebrow {
+    gap: 10px;
+
+    margin-bottom: 19px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .mht-why__eyebrow span {
+    width: 30px;
+
+    height: 2px;
+  }
+
+  .mht-why__heading h2 {
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 34px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.4px;
+  }
+
+  .mht-why__heading p {
+    margin-top: 18px;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+  }
+
+
+  /* -----------------------------------------
+     GRID
+  ----------------------------------------- */
+
+  .mht-why__grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  /* -----------------------------------------
+     CARD
+  ----------------------------------------- */
+
+  .mht-why__card {
+    min-height: auto;
+
+    padding: 25px 22px;
+
+    gap: 18px;
+
+    border-radius: 8px;
+  }
+
+
+  /* -----------------------------------------
+     ICON
+  ----------------------------------------- */
+
+  .mht-why__icon {
+    width: 58px;
+
+    height: 58px;
+
+    min-width: 58px;
+
+    border-radius: 6px;
+  }
+
+  .mht-why__icon svg {
+    width: 27px;
+
+    height: 27px;
+  }
+
+
+  /* -----------------------------------------
+     CARD TITLE
+  ----------------------------------------- */
+
+  .mht-why__card h3 {
+    margin-top: 1px;
+
+    font-size: 20px;
+
+    line-height: 1.25;
+  }
+
+
+  /* -----------------------------------------
+     CARD TEXT
+  ----------------------------------------- */
+
+  .mht-why__card p {
+    margin-top: 11px;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .mht-why {
+    padding: 60px 0 65px;
+  }
+
+  .mht-why__container {
+    padding: 0 17px;
+  }
+
+
+  /* -----------------------------------------
+     HEADING
+  ----------------------------------------- */
+
+  .mht-why__heading {
+    margin-bottom: 35px;
+  }
+
+  .mht-why__eyebrow {
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    font-size: 8.5px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .mht-why__eyebrow span {
+    width: 25px;
+
+    height: 2px;
+  }
+
+  .mht-why__heading h2 {
+    max-width: 360px;
+
+    font-size: 30px;
+
+    line-height: 1.12;
+
+    letter-spacing: -0.3px;
+  }
+
+  .mht-why__heading p {
+    margin-top: 16px;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+  }
+
+
+  /* -----------------------------------------
+     GRID
+  ----------------------------------------- */
+
+  .mht-why__grid {
+    gap: 15px;
+  }
+
+
+  /* -----------------------------------------
+     CARD
+  ----------------------------------------- */
+
+  .mht-why__card {
+    padding: 21px 18px;
+
+    gap: 15px;
+  }
+
+
+  /* -----------------------------------------
+     ICON
+  ----------------------------------------- */
+
+  .mht-why__icon {
+    width: 52px;
+
+    height: 52px;
+
+    min-width: 52px;
+  }
+
+  .mht-why__icon svg {
+    width: 24px;
+
+    height: 24px;
+  }
+
+
+  /* -----------------------------------------
+     CARD TITLE
+  ----------------------------------------- */
+
+  .mht-why__card h3 {
+    font-size: 18px;
+
+    line-height: 1.25;
+  }
+
+
+  /* -----------------------------------------
+     CARD DESCRIPTION
+  ----------------------------------------- */
+
+  .mht-why__card p {
+    margin-top: 9px;
+
+    font-size: 13.5px;
+
+    line-height: 1.5;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .mht-why {
+    padding: 52px 0 58px;
+  }
+
+  .mht-why__container {
+    padding: 0 15px;
+  }
+
+
+  /* -----------------------------------------
+     HEADING
+  ----------------------------------------- */
+
+  .mht-why__heading {
+    margin-bottom: 30px;
+  }
+
+  .mht-why__eyebrow {
+    margin-bottom: 16px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.2px;
+  }
+
+  .mht-why__eyebrow span {
+    width: 23px;
+  }
+
+  .mht-why__heading h2 {
+    max-width: 320px;
+
+    font-size: 27px;
+
+    line-height: 1.12;
+  }
+
+  .mht-why__heading p {
+    font-size: 13.5px;
+  }
+
+
+  /* -----------------------------------------
+     CARD
+  ----------------------------------------- */
+
+  .mht-why__card {
+    padding: 18px 15px;
+
+    gap: 13px;
+  }
+
+
+  /* -----------------------------------------
+     ICON
+  ----------------------------------------- */
+
+  .mht-why__icon {
+    width: 48px;
+
+    height: 48px;
+
+    min-width: 48px;
+  }
+
+  .mht-why__icon svg {
+    width: 22px;
+
+    height: 22px;
+  }
+
+
+  /* -----------------------------------------
+     TITLE
+  ----------------------------------------- */
+
+  .mht-why__card h3 {
+    font-size: 17px;
+  }
+
+
+  /* -----------------------------------------
+     DESCRIPTION
+  ----------------------------------------- */
+
+  .mht-why__card p {
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .mht-why__card,
+  .mht-why__icon {
+    transition: none;
+  }
+}

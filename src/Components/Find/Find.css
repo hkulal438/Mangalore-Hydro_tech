@@ -1,0 +1,341 @@
+/* =========================================================
+   MANGALORE HYDRO TESTING - FIND US
+   ========================================================= */
+
+.mht-find {
+  width: 100%;
+  padding: 60px 20px 70px;
+  background: #fff;
+  overflow: hidden;
+  font-family: Cambria, Georgia, serif;
+}
+
+.mht-find *,
+.mht-find *::before,
+.mht-find *::after {
+  box-sizing: border-box;
+}
+
+.mht-find__container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.mht-find__header {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.mht-find__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mht-find__eyebrow span {
+  width: 28px;
+  height: 2px;
+  background: #00a651;
+}
+
+.mht-find__eyebrow p {
+  margin: 0;
+  color: #00a651;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.mht-find__header h2 {
+  margin: 0;
+  color: #34495e;
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+.mht-find__header h2 span {
+  color: #00a651;
+}
+
+
+/* ================= CONTENT ================= */
+
+.mht-find__content {
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: 25px;
+}
+
+
+/* ================= ADDRESS CARD ================= */
+
+.mht-find__address-card {
+  min-height: 330px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  background: #101820;
+  border-radius: 9px;
+}
+
+.mht-find__address-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #00a651;
+  border-radius: 7px;
+  color: #fff;
+}
+
+.mht-find__address-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.mht-find__address-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mht-find__address-content h3 {
+  margin: 0 0 12px;
+  color: #f4d35e;
+  font-size: 13px;
+  letter-spacing: 1.8px;
+}
+
+.mht-find__address-content > p {
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.mht-find__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.mht-find__phone svg {
+  width: 20px;
+  height: 20px;
+  color: #00a651;
+}
+
+.mht-find__phone:hover {
+  color: #00a651;
+}
+
+.mht-find__directions {
+  width: fit-content;
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding: 0 20px;
+  background: #00a651;
+  border: 2px solid #00a651;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mht-find__directions:hover {
+  background: #008f46;
+  border-color: #008f46;
+}
+
+.mht-find__directions svg {
+  width: 17px;
+  height: 17px;
+}
+
+
+/* ================= MAP CARD ================= */
+
+.mht-find__map-card {
+  position: relative;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: #f7f8f8;
+  border: 1px solid #dfe4e6;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.mht-find__map-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(52,73,94,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(52,73,94,.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.mht-find__map-location {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mht-find__map-pin {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 17px;
+  background: #00a651;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,166,81,.18);
+}
+
+.mht-find__map-pin svg {
+  width: 31px;
+  height: 31px;
+}
+
+.mht-find__map-location h3 {
+  margin: 0;
+  color: #34495e;
+  font-size: 21px;
+}
+
+.mht-find__map-location > p {
+  margin: 8px 0 0;
+  color: #65737d;
+  font-size: 14px;
+}
+
+.mht-find__map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  color: #00a651;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mht-find__map-link:hover {
+  color: #008f46;
+}
+
+.mht-find__map-link svg {
+  width: 17px;
+  height: 17px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 800px) {
+
+  .mht-find {
+    padding: 50px 16px 60px;
+  }
+
+  .mht-find__header {
+    margin-bottom: 30px;
+  }
+
+  .mht-find__header h2 {
+    font-size: 34px;
+  }
+
+  .mht-find__content {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .mht-find__address-card,
+  .mht-find__map-card {
+    min-height: 290px;
+  }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 500px) {
+
+  .mht-find {
+    padding: 45px 12px 55px;
+  }
+
+  .mht-find__eyebrow span {
+    width: 20px;
+  }
+
+  .mht-find__eyebrow p {
+    font-size: 10px;
+  }
+
+  .mht-find__header h2 {
+    font-size: 29px;
+  }
+
+  .mht-find__content {
+    gap: 16px;
+  }
+
+  .mht-find__address-card {
+    min-height: 300px;
+    padding: 20px;
+  }
+
+  .mht-find__address-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .mht-find__address-content > p {
+    font-size: 14px;
+  }
+
+  .mht-find__directions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mht-find__map-card {
+    min-height: 270px;
+  }
+
+  .mht-find__map-pin {
+    width: 55px;
+    height: 55px;
+  }
+
+  .mht-find__map-location h3 {
+    font-size: 19px;
+  }
+}

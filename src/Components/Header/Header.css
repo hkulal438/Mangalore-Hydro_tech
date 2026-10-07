@@ -1,0 +1,909 @@
+/* =========================================================
+   MANGALORE HYDRO TESTING
+   PROFESSIONAL HEADER / NAVBAR
+   CLEAN + COMPRESSED + RESPONSIVE
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  padding-top: 84px;
+  font-family: Cambria, Georgia, serif;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.mht-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 84px;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+
+  border: none !important;
+  outline: none !important;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+  z-index: 10000;
+}
+
+
+/* =========================================================
+   HEADER INNER
+   ========================================================= */
+
+.mht-header__inner {
+  width: 100%;
+  max-width: 1700px;
+
+  height: 84px;
+
+  margin: 0 auto;
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   LOGO
+   IMPORTANT:
+   Do NOT force image height.
+   Natural aspect ratio is preserved.
+   ========================================================= */
+
+.mht-header__logo {
+  width: 175px;
+  height: 84px;
+
+  flex: 0 0 175px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin: 0;
+  padding: 0;
+
+  line-height: 0;
+
+  text-decoration: none !important;
+
+  overflow: hidden;
+}
+
+.mht-header__logo img {
+  display: block;
+
+  width: 170px;
+  height: auto;
+
+  max-width: 170px;
+  max-height: 80px;
+
+  object-fit: contain;
+  object-position: left center;
+
+  /*
+    Keep browser image interpolation normal.
+    This is better for JPEG logos than forced
+    width + height stretching.
+  */
+  image-rendering: auto;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.mht-header__nav {
+  flex: 1;
+  min-width: 0;
+
+  height: 84px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+   ========================================================= */
+
+.mht-header__nav > a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 62px;
+
+  padding: 0 11px;
+
+  margin: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #34495e;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-decoration: none !important;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* Remove unwanted pseudo-elements */
+
+.mht-header__nav > a::before,
+.mht-header__nav > a::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+/* Hover */
+
+.mht-header__nav > a:hover,
+.mht-header__nav > a:focus,
+.mht-header__nav > a:focus-visible,
+.mht-header__nav > a:active {
+  color: #00a651;
+
+  background: transparent;
+
+  text-decoration: none !important;
+
+  outline: none;
+}
+
+
+/* =========================================================
+   DESKTOP ACTIONS
+   ========================================================= */
+
+.mht-header__actions {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  flex-shrink: 0;
+
+  margin-left: 14px;
+}
+
+
+/* =========================================================
+   WHATSAPP + CALL ICONS
+   ========================================================= */
+
+.mht-header__icon {
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+
+  border: none;
+
+  border-radius: 50%;
+
+  color: #34495e;
+
+  text-decoration: none !important;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* SVG size */
+
+.mht-header__icon svg {
+  display: block;
+
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+}
+
+
+/* Hover */
+
+.mht-header__icon:hover,
+.mht-header__icon:focus,
+.mht-header__icon:focus-visible {
+  color: #00a651;
+
+  transform: scale(1.08);
+
+  outline: none;
+}
+
+
+/* =========================================================
+   BOOK A SERVICE
+   ========================================================= */
+
+.mht-header__cta {
+  height: 48px;
+
+  min-width: 175px;
+
+  padding: 0 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  background: #00a651;
+
+  border: 1px solid #00a651;
+
+  border-radius: 6px;
+
+  color: #ffffff;
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-decoration: none !important;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.mht-header__cta:hover,
+.mht-header__cta:focus,
+.mht-header__cta:focus-visible {
+  background: #008f45;
+
+  border-color: #008f45;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 12px rgba(0, 166, 81, 0.18);
+
+  outline: none;
+}
+
+.mht-header__cta span:last-child {
+  font-size: 19px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   MOBILE CTA
+   ========================================================= */
+
+.mht-header__mobile-cta {
+  display: none !important;
+}
+
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.mht-header__menu-button {
+  display: none;
+
+  width: 46px;
+  height: 46px;
+
+  flex: 0 0 46px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  margin: 0 0 0 auto;
+  padding: 0;
+
+  background: #ffffff;
+
+  border: 1.5px solid #34495e;
+
+  border-radius: 5px;
+
+  color: #34495e;
+
+  cursor: pointer;
+
+  position: relative;
+
+  z-index: 10005;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  outline: none;
+
+  box-shadow: none;
+}
+
+.mht-header__menu-button:hover {
+  background: #f7f9fa;
+  border-color: #00a651;
+}
+
+.mht-header__menu-button:focus,
+.mht-header__menu-button:focus-visible,
+.mht-header__menu-button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* Hamburger bars */
+
+.mht-header__menu-button span {
+  width: 24px;
+  height: 2.5px;
+
+  display: block;
+
+  background: #34495e;
+
+  border-radius: 5px;
+
+  flex-shrink: 0;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+.mht-header__menu-button:hover span {
+  background: #00a651;
+}
+
+
+/* =========================================================
+   HAMBURGER ACTIVE
+   ========================================================= */
+
+.mht-header__menu-button--active span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.mht-header__menu-button--active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mht-header__menu-button--active span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   TABLET - 1200PX
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .mht-header__nav {
+    gap: 4px;
+  }
+
+  .mht-header__nav > a {
+    padding: 0 7px;
+    font-size: 15px;
+  }
+
+  .mht-header__actions {
+    gap: 10px;
+    margin-left: 8px;
+  }
+
+  .mht-header__icon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .mht-header__icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .mht-header__cta {
+    min-width: 155px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE - 1100PX
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  body {
+    padding-top: 78px;
+  }
+
+  .mht-header {
+    height: 78px;
+  }
+
+  .mht-header__inner {
+    height: 78px;
+
+    padding: 0 18px;
+
+    gap: 10px;
+
+    justify-content: space-between;
+  }
+
+
+  /* Hide desktop navigation/actions */
+
+  .mht-header__nav,
+  .mht-header__actions {
+    display: none;
+  }
+
+
+  /* =======================================================
+     MOBILE LOGO
+     ======================================================= */
+
+  .mht-header__logo {
+    width: 140px;
+    height: 78px;
+
+    flex: 0 0 140px;
+  }
+
+  .mht-header__logo img {
+    width: 134px;
+    height: auto;
+
+    max-width: 134px;
+    max-height: 72px;
+
+    object-fit: contain;
+  }
+
+
+  /* =======================================================
+     HAMBURGER
+     ======================================================= */
+
+  .mht-header__menu-button {
+    display: flex;
+  }
+
+
+  /* =======================================================
+     MOBILE MENU
+     ======================================================= */
+
+  .mht-header__nav.mht-header__nav--open {
+    position: fixed;
+
+    top: 78px;
+    left: 0;
+
+    width: 100%;
+    height: calc(100vh - 78px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 0;
+
+    padding: 0 20px 30px;
+
+    background: #ffffff;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    z-index: 9999;
+  }
+
+
+  /* Mobile links */
+
+  .mht-header__nav.mht-header__nav--open > a {
+    width: 100%;
+
+    height: 58px;
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0 4px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #34495e;
+
+    font-family: Cambria, Georgia, serif;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none !important;
+  }
+
+  .mht-header__nav.mht-header__nav--open > a:hover {
+    color: #00a651;
+    background: transparent;
+  }
+
+
+  /* Mobile CTA */
+
+  .mht-header__nav.mht-header__nav--open
+  .mht-header__mobile-cta {
+    display: flex !important;
+
+    width: 100%;
+
+    height: 48px;
+    min-height: 48px;
+
+    margin-top: 22px;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 16px;
+
+    background: #00a651;
+
+    border: 1px solid #00a651;
+
+    border-radius: 6px;
+
+    color: #ffffff;
+
+    font-family: Cambria, Georgia, serif;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none !important;
+  }
+
+  .mht-header__nav.mht-header__nav--open
+  .mht-header__mobile-cta:hover {
+    background: #008f45;
+    color: #ffffff;
+  }
+}
+
+
+/* =========================================================
+   MOBILE - 768PX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 76px;
+  }
+
+  .mht-header {
+    height: 76px;
+  }
+
+  .mht-header__inner {
+    height: 76px;
+
+    padding: 0 14px;
+
+    gap: 9px;
+  }
+
+
+  /* Logo */
+
+  .mht-header__logo {
+    width: 125px;
+    height: 76px;
+
+    flex: 0 0 125px;
+  }
+
+  .mht-header__logo img {
+    width: 120px;
+    height: auto;
+
+    max-width: 120px;
+    max-height: 70px;
+
+    object-fit: contain;
+  }
+
+
+  /* Hamburger */
+
+  .mht-header__menu-button {
+    width: 45px;
+    height: 45px;
+
+    flex: 0 0 45px;
+  }
+
+  .mht-header__menu-button span {
+    width: 23px;
+  }
+
+
+  /* Mobile menu */
+
+  .mht-header__nav.mht-header__nav--open {
+    top: 76px;
+    height: calc(100vh - 76px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE - 600PX
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .mht-header__inner {
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+
+  /* Logo */
+
+  .mht-header__logo {
+    width: 115px;
+    flex: 0 0 115px;
+  }
+
+  .mht-header__logo img {
+    width: 110px;
+    height: auto;
+
+    max-width: 110px;
+    max-height: 64px;
+  }
+
+
+  /* Hamburger */
+
+  .mht-header__menu-button {
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+  }
+
+  .mht-header__menu-button span {
+    width: 22px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE - 430PX
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .mht-header__inner {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    gap: 7px;
+  }
+
+
+  /* Logo */
+
+  .mht-header__logo {
+    width: 108px;
+    flex: 0 0 108px;
+  }
+
+  .mht-header__logo img {
+    width: 103px;
+    height: auto;
+
+    max-width: 103px;
+    max-height: 61px;
+  }
+
+
+  /* Hamburger */
+
+  .mht-header__menu-button {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+  }
+
+  .mht-header__menu-button span {
+    width: 21px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE - 360PX
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .mht-header__inner {
+    padding-left: 9px;
+    padding-right: 9px;
+
+    gap: 5px;
+  }
+
+
+  /* Logo */
+
+  .mht-header__logo {
+    width: 100px;
+    flex: 0 0 100px;
+  }
+
+  .mht-header__logo img {
+    width: 95px;
+    height: auto;
+
+    max-width: 95px;
+    max-height: 58px;
+  }
+
+
+  /* Hamburger */
+
+  .mht-header__menu-button {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+  }
+
+  .mht-header__menu-button span {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.mht-header a:focus-visible,
+.mht-header button:focus-visible {
+  outline: 2px solid #00a651;
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .mht-header *,
+  .mht-header *::before,
+  .mht-header *::after {
+    transition: none !important;
+  }
+}
