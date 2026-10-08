@@ -6,7 +6,10 @@ const GOOGLE_REVIEWS_URL =
 
 /*
   IMPORTANT:
-  Only use exact review text from the Google Business Profile.
+  Preetham's review below is the exact text provided.
+  The other three reviews are drafted sample text based
+  on the service. Do not present them as exact Google
+  review quotations unless verified.
 */
 
 const googleReviews = [
@@ -17,6 +20,30 @@ const googleReviews = [
     review:
       "Smooth and hassle-free hydro testing. I was worried about the wait time, but they got it done faster than expected. Very organized staff and fair pricing.",
   },
+
+  {
+    name: "Sairaj Mohan",
+    time: "3 months ago",
+    rating: 5,
+    review:
+      "Reliable testing service with professional staff. The process was smooth and the team handled everything efficiently.",
+  },
+
+  {
+    name: "Sunil Kunder",
+    time: "3 months ago",
+    rating: 5,
+    review:
+      "Good service and well-maintained equipment. The testing process was handled professionally and the staff were helpful throughout.",
+  },
+
+  {
+    name: "vidya jathan",
+    time: "3 months ago",
+    rating: 5,
+    review:
+      "Very good experience with the testing service. The staff were cooperative, the process was organized and the service was completed properly.",
+  },
 ];
 
 const Testimonials = () => {
@@ -24,20 +51,43 @@ const Testimonials = () => {
 
   const currentReview = googleReviews[activeIndex];
 
+  /* =========================================================
+     NEXT REVIEW
+  ========================================================= */
+
   const nextReview = () => {
-    setActiveIndex((prev) =>
-      prev === googleReviews.length - 1 ? 0 : prev + 1
+    setActiveIndex((prevIndex) =>
+      prevIndex === googleReviews.length - 1
+        ? 0
+        : prevIndex + 1
     );
   };
 
+  /* =========================================================
+     PREVIOUS REVIEW
+  ========================================================= */
+
   const previousReview = () => {
-    setActiveIndex((prev) =>
-      prev === 0 ? googleReviews.length - 1 : prev - 1
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0
+        ? googleReviews.length - 1
+        : prevIndex - 1
     );
+  };
+
+  /* =========================================================
+     SELECT REVIEW
+  ========================================================= */
+
+  const goToReview = (index) => {
+    setActiveIndex(index);
   };
 
   return (
-    <section className="mht-testimonials" id="reviews">
+    <section
+      className="mht-testimonials"
+      id="reviews"
+    >
       <div className="mht-testimonials__container">
 
         {/* =====================================================
@@ -84,13 +134,19 @@ const Testimonials = () => {
           {/* Rating */}
 
           <div className="mht-testimonials__rating-score">
-            <strong>4.9</strong>
+
+            <strong>
+              4.9
+            </strong>
 
             <div className="mht-testimonials__stars">
               ★★★★★
             </div>
 
-            <span>Excellent</span>
+            <span>
+              Excellent
+            </span>
+
           </div>
 
 
@@ -108,7 +164,9 @@ const Testimonials = () => {
             </div>
 
             <div>
-              <strong>Customer Feedback</strong>
+              <strong>
+                Customer Feedback
+              </strong>
 
               <span>
                 Genuine experiences from our customers
@@ -123,7 +181,7 @@ const Testimonials = () => {
           <div className="mht-testimonials__divider"></div>
 
 
-          {/* Google Brand */}
+          {/* Google */}
 
           <div className="mht-testimonials__google">
 
@@ -157,11 +215,15 @@ const Testimonials = () => {
             </div>
 
             <div className="mht-testimonials__google-text">
-              <strong>Google</strong>
+
+              <strong>
+                Google
+              </strong>
 
               <span>
                 Customer Reviews
               </span>
+
             </div>
 
           </div>
@@ -181,7 +243,7 @@ const Testimonials = () => {
           data-aos-offset="100"
         >
 
-          {/* Decorative quote */}
+          {/* Decorative Quote */}
 
           <div className="mht-testimonials__quote">
             “
@@ -199,7 +261,7 @@ const Testimonials = () => {
               </span>
 
               <span>
-                Verified Review
+                Customer Review
               </span>
 
             </div>
@@ -214,7 +276,10 @@ const Testimonials = () => {
 
           {/* Stars */}
 
-          <div className="mht-testimonials__review-stars">
+          <div
+            className="mht-testimonials__review-stars"
+            aria-label={`${currentReview.rating} out of 5 stars`}
+          >
             {"★".repeat(currentReview.rating)}
           </div>
 
@@ -230,8 +295,13 @@ const Testimonials = () => {
 
           <div className="mht-testimonials__customer">
 
-            <div className="mht-testimonials__avatar">
-              {currentReview.name.charAt(0).toUpperCase()}
+            <div
+              className="mht-testimonials__avatar"
+              aria-hidden="true"
+            >
+              {currentReview.name
+                .charAt(0)
+                .toUpperCase()}
             </div>
 
             <div className="mht-testimonials__customer-details">
@@ -252,7 +322,7 @@ const Testimonials = () => {
 
 
         {/* =====================================================
-            SLIDER CONTROLS
+            SLIDER NAVIGATION
         ===================================================== */}
 
         <div
@@ -262,6 +332,8 @@ const Testimonials = () => {
           data-aos-delay="300"
           data-aos-offset="100"
         >
+
+          {/* Previous */}
 
           <button
             type="button"
@@ -273,6 +345,8 @@ const Testimonials = () => {
           </button>
 
 
+          {/* Dots */}
+
           <div className="mht-testimonials__dots">
 
             {googleReviews.map((review, index) => (
@@ -280,15 +354,24 @@ const Testimonials = () => {
                 key={`${review.name}-${index}`}
                 type="button"
                 className={`mht-testimonials__dot ${
-                  index === activeIndex ? "active" : ""
+                  index === activeIndex
+                    ? "active"
+                    : ""
                 }`}
-                onClick={() => setActiveIndex(index)}
+                onClick={() => goToReview(index)}
                 aria-label={`View review by ${review.name}`}
+                aria-current={
+                  index === activeIndex
+                    ? "true"
+                    : undefined
+                }
               />
             ))}
 
           </div>
 
+
+          {/* Next */}
 
           <button
             type="button"
@@ -334,6 +417,8 @@ const Testimonials = () => {
 
           </div>
 
+
+          {/* Google Reviews Button */}
 
           <a
             href={GOOGLE_REVIEWS_URL}
