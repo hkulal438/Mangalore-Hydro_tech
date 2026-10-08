@@ -1,5 +1,5 @@
 import "./Footer.css";
-import logoImage from "../../images/logo_png.png";
+import logoImage from "../../images/MHT Logo_icon.png";
 
 const Footer = () => {
   return (
