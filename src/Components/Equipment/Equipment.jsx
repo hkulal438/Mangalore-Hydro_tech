@@ -9,24 +9,24 @@ import waterJacketImage from "../../images/water jacket.avif";
 const equipmentData = [
   {
     number: "01",
-    title: "Cylinder Rotating Vise",
-    image: rotateImage,
-    description:
-      "Used for securely holding and rotating cylinders during inspection, cleaning and valve-related service operations. It provides stable handling and helps technicians work safely and efficiently.",
-  },
-  {
-    number: "02",
     title: "Degassing Unit",
     image: degassingImage,
     description:
       "Used to safely remove residual gas from the cylinder before testing and servicing. Proper degassing helps prepare the cylinder for subsequent inspection and hydro testing procedures.",
   },
   {
-    number: "03",
-    title: "Dryers",
-    image: dryingImage,
+    number: "02",
+    title: "Cylinder Rotating Vise",
+    image: rotateImage,
     description:
-      "Used to remove moisture from the cylinder after hydro testing and cleaning. Thorough drying helps prevent internal moisture and prepares the cylinder for further inspection and service.",
+      "Used for securely holding and rotating cylinders during inspection, cleaning and valve-related service operations. It provides stable handling and helps technicians work safely and efficiently.",
+  },
+  {
+    number: "03",
+    title: "Water Jacket",
+    image: waterJacketImage,
+    description:
+      "Used for hydrostatic testing of cylinders through the water jacket method. The setup helps measure cylinder expansion during pressure testing and supports systematic assessment of cylinder integrity.",
   },
   {
     number: "04",
@@ -37,16 +37,19 @@ const equipmentData = [
   },
   {
     number: "05",
-    title: "Water Jacket",
-    image: waterJacketImage,
+    title: "Dryers",
+    image: dryingImage,
     description:
-      "Used for hydrostatic testing of cylinders through the water jacket method. The setup helps measure cylinder expansion during pressure testing and supports systematic assessment of cylinder integrity.",
+      "Used to remove moisture from the cylinder after hydro testing and cleaning. Thorough drying helps prevent internal moisture and prepares the cylinder for further inspection and service.",
   },
 ];
 
 const Equipment = () => {
   return (
-    <section className="mht-equipment" id="equipment">
+    <section
+      className="mht-equipment"
+      id="equipment"
+    >
 
       <div className="mht-equipment__container">
 
@@ -60,6 +63,7 @@ const Equipment = () => {
           data-aos-duration="800"
           data-aos-offset="100"
         >
+
           <p className="mht-equipment__eyebrow">
             SPECIALIZED EQUIPMENT
           </p>
@@ -69,10 +73,11 @@ const Equipment = () => {
           </h2>
 
           <p className="mht-equipment__intro">
-            Our facility is equipped with specialized machinery and testing
-            equipment to support safe, accurate and systematic CNG cylinder
-            inspection and maintenance.
+            Our facility is equipped with specialized machinery and
+            testing equipment to support safe, accurate and systematic
+            CNG cylinder inspection and maintenance.
           </p>
+
         </div>
 
 
@@ -83,27 +88,42 @@ const Equipment = () => {
         <div className="mht-equipment__grid">
 
           {equipmentData.map((equipment, index) => (
+
             <article
               className="mht-equipment__card"
               key={equipment.number}
-              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+
+              data-aos={
+                index % 2 === 0
+                  ? "fade-right"
+                  : "fade-left"
+              }
+
               data-aos-duration="850"
+
               data-aos-delay={index * 100}
+
               data-aos-offset="100"
             >
 
-              {/* Image */}
+              {/* =================================================
+                  IMAGE
+              ================================================= */}
 
               <div className="mht-equipment__image-wrap">
+
                 <img
                   src={equipment.image}
                   alt={equipment.title}
                   className="mht-equipment__image"
                 />
+
               </div>
 
 
-              {/* Content */}
+              {/* =================================================
+                  CONTENT
+              ================================================= */}
 
               <div className="mht-equipment__content">
 
@@ -124,6 +144,7 @@ const Equipment = () => {
               </div>
 
             </article>
+
           ))}
 
 
@@ -133,9 +154,13 @@ const Equipment = () => {
 
           <article
             className="mht-equipment__cta"
+
             data-aos="fade-up"
+
             data-aos-duration="850"
+
             data-aos-delay="300"
+
             data-aos-offset="100"
           >
 
@@ -152,17 +177,24 @@ const Equipment = () => {
               </h3>
 
               <p>
-                Professional equipment and systematic testing processes
-                help us deliver dependable CNG cylinder inspection and
-                certification services.
+                Professional equipment and systematic testing
+                processes help us deliver dependable CNG cylinder
+                inspection and certification services.
               </p>
 
               <a
                 href="#contact"
                 className="mht-equipment__cta-button"
               >
-                <span>BOOK A SERVICE</span>
-                <span>→</span>
+
+                <span>
+                  BOOK A SERVICE
+                </span>
+
+                <span>
+                  →
+                </span>
+
               </a>
 
             </div>
