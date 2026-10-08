@@ -1,69 +1,136 @@
 /* =========================================================
-   MANGALORE HYDRO TESTING
-   ADVANCED TESTING & SAFETY EQUIPMENT
-   ========================================================= */
+   MANGALORE HYDRO TECH
+   TESTING PROCESS / EQUIPMENT
+   PREMIUM LIGHT VERSION
+========================================================= */
 
 .mht-equipment {
   --yellow: #f4d35e;
   --green: #00a651;
   --blue: #34495e;
   --blue-dark: #273946;
-  --card: #1d252a;
   --white: #ffffff;
-  --text-light: #b9c9d5;
+
+  --text: #34495e;
+  --text-muted: #60717c;
+  --soft-green: #f1f8f4;
+  --soft-yellow: #fff9df;
+  --border: rgba(52, 73, 94, 0.1);
+
+  position: relative;
 
   width: 100%;
-  background: #11191f;
-  color: var(--white);
+
+  background: #f7f9f8;
+
+  color: var(--text);
 
   font-family: Cambria, Georgia, serif;
 
   overflow: hidden;
 }
 
+/* =========================================================
+   SUBTLE BACKGROUND
+========================================================= */
+
+.mht-equipment::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(0, 166, 81, 0.045),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(244, 211, 94, 0.055),
+      transparent 25%
+    );
+}
+
+/* =========================================================
+   TOP ACCENT
+========================================================= */
+
+.mht-equipment::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 75px;
+  height: 3px;
+
+  transform: translateX(-50%);
+
+  background: var(--green);
+}
 
 /* =========================================================
    CONTAINER
-   ========================================================= */
+========================================================= */
 
 .mht-equipment__container {
+  position: relative;
+
+  z-index: 1;
+
   width: min(1550px, calc(100% - 40px));
 
   margin: 0 auto;
 
-  padding: 72px 0 80px;
+  padding: 55px 0 70px;
 }
-
 
 /* =========================================================
-   HEADER
-   ========================================================= */
+   SECTION HEADER
+========================================================= */
 
 .mht-equipment__header {
-  margin-bottom: 52px;
+  max-width: 950px;
+
+  margin: 0 auto 42px;
+
+  text-align: center;
 }
 
-
-/* Eyebrow */
+/* =========================================================
+   EYEBROW
+========================================================= */
 
 .mht-equipment__eyebrow {
-  position: relative;
-
   display: flex;
+
   align-items: center;
+  justify-content: center;
 
-  gap: 14px;
+  gap: 13px;
 
-  margin: 0 0 22px;
+  margin: 0 0 15px;
 
-  color: var(--yellow);
+  color: var(--green);
 
-  font-size: 14px;
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 13px;
+
   font-weight: 700;
 
-  letter-spacing: 2.5px;
+  letter-spacing: 2.4px;
 
-  line-height: 1;
+  line-height: 1.2;
+
+  text-align: center;
 
   text-transform: uppercase;
 }
@@ -71,77 +138,96 @@
 .mht-equipment__eyebrow::before {
   content: "";
 
-  width: 38px;
+  width: 32px;
   height: 2px;
 
-  background: var(--green);
-
   flex-shrink: 0;
+
+  background: var(--yellow);
 }
 
-
-/* Main heading */
+/* =========================================================
+   MAIN TITLE
+========================================================= */
 
 .mht-equipment__title {
-  margin: 0;
+  max-width: 900px;
 
-  color: var(--white);
+  margin: 0 auto;
 
-  font-size: 46px;
+  padding: 0;
+
+  color: var(--blue);
+
+  font-family: Cambria, Georgia, serif;
+
+  font-size: clamp(38px, 3.8vw, 56px);
+
   font-weight: 700;
 
-  line-height: 1.12;
+  line-height: 1.08;
 
-  letter-spacing: -0.4px;
+  letter-spacing: -0.5px;
+
+  text-align: center;
 }
 
-
-/* Intro */
+/* =========================================================
+   INTRO / SUBHEADING
+========================================================= */
 
 .mht-equipment__intro {
   max-width: 760px;
 
-  margin: 18px 0 0;
+  margin: 15px auto 0;
 
-  color: var(--text-light);
+  color: var(--text-muted);
+
+  font-family: Cambria, Georgia, serif;
 
   font-size: 16px;
 
-  line-height: 1.65;
-}
+  font-weight: 400;
 
+  line-height: 1.6;
+
+  text-align: center;
+}
 
 /* =========================================================
    GRID
-   ========================================================= */
+========================================================= */
 
 .mht-equipment__grid {
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1fr)
-    minmax(0, 1fr);
+    repeat(2, minmax(0, 1fr));
 
-  gap: 30px;
+  gap: 20px;
 }
-
 
 /* =========================================================
    EQUIPMENT CARD
-   ========================================================= */
+========================================================= */
 
 .mht-equipment__card {
+  position: relative;
+
   display: grid;
 
   grid-template-columns: 40% 60%;
 
-  min-height: 258px;
+  min-height: 245px;
 
-  background: var(--card);
+  background: var(--white);
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
 
   border-radius: 10px;
+
+  box-shadow:
+    0 8px 25px rgba(52, 73, 94, 0.06);
 
   overflow: hidden;
 
@@ -151,30 +237,63 @@
     box-shadow 0.3s ease;
 }
 
-.mht-equipment__card:hover {
-  transform: translateY(-3px);
+/* =========================================================
+   CARD GREEN ACCENT
+========================================================= */
 
-  border-color: rgba(0, 166, 81, 0.55);
+.mht-equipment__card::before {
+  content: "";
 
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.22);
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background: var(--green);
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
 }
 
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.mht-equipment__card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(0, 166, 81, 0.25);
+
+  box-shadow:
+    0 15px 35px rgba(52, 73, 94, 0.1);
+}
+
+.mht-equipment__card:hover::before {
+  opacity: 1;
+}
 
 /* =========================================================
-   IMAGE
-   ========================================================= */
+   IMAGE WRAPPER
+========================================================= */
 
 .mht-equipment__image-wrap {
   position: relative;
 
   width: 100%;
-  height: 258px;
+  height: 245px;
 
   overflow: hidden;
 
-  background: #dce2e5;
+  background: #e8eeee;
 }
+
+/* =========================================================
+   IMAGE
+========================================================= */
 
 .mht-equipment__image {
   display: block;
@@ -194,8 +313,9 @@
   transform: scale(1.04);
 }
 
-
-/* Image subtle overlay */
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
 
 .mht-equipment__image-wrap::after {
   content: "";
@@ -204,19 +324,19 @@
 
   inset: 0;
 
-  background: linear-gradient(
-    90deg,
-    transparent 70%,
-    rgba(29, 37, 42, 0.18)
-  );
+  background:
+    linear-gradient(
+      90deg,
+      transparent 65%,
+      rgba(52, 73, 94, 0.1)
+    );
 
   pointer-events: none;
 }
 
-
 /* =========================================================
    CARD CONTENT
-   ========================================================= */
+========================================================= */
 
 .mht-equipment__content {
   display: flex;
@@ -225,13 +345,14 @@
 
   justify-content: center;
 
-  padding: 30px 34px;
+  padding: 28px 32px;
 
   min-width: 0;
 }
 
-
-/* Equipment number */
+/* =========================================================
+   EQUIPMENT NUMBER
+========================================================= */
 
 .mht-equipment__number {
   display: flex;
@@ -240,11 +361,13 @@
 
   width: fit-content;
 
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 
-  color: var(--yellow);
+  color: var(--green);
 
-  font-size: 13px;
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -256,60 +379,61 @@
 .mht-equipment__number::after {
   content: "";
 
-  width: 26px;
+  width: 25px;
   height: 1px;
 
   margin-left: 10px;
 
-  background: var(--green);
+  background: var(--yellow);
 }
 
-
 /* =========================================================
-   TITLE
-   ========================================================= */
+   CARD TITLE
+========================================================= */
 
 .mht-equipment__content h3 {
   margin: 0;
 
-  color: var(--white);
+  color: var(--blue);
 
-  font-size: 24px;
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 23px;
 
   font-weight: 700;
 
-  line-height: 1.2;
+  line-height: 1.22;
 }
 
-
 /* =========================================================
-   DESCRIPTION
-   ========================================================= */
+   CARD DESCRIPTION
+========================================================= */
 
 .mht-equipment__content p {
   max-width: 430px;
 
-  margin: 16px 0 0;
+  margin: 12px 0 0;
 
-  color: var(--text-light);
+  color: var(--text-muted);
+
+  font-family: Cambria, Georgia, serif;
 
   font-size: 15px;
 
-  line-height: 1.65;
+  line-height: 1.6;
 }
-
 
 /* =========================================================
    CARD ACCENT LINE
-   ========================================================= */
+========================================================= */
 
 .mht-equipment__line {
   display: block;
 
-  width: 50px;
+  width: 45px;
   height: 2px;
 
-  margin-top: 22px;
+  margin-top: 18px;
 
   background: var(--green);
 
@@ -319,15 +443,14 @@
 }
 
 .mht-equipment__card:hover .mht-equipment__line {
-  width: 78px;
+  width: 72px;
 
   background: var(--yellow);
 }
 
-
 /* =========================================================
    CTA CARD
-   ========================================================= */
+========================================================= */
 
 .mht-equipment__cta {
   position: relative;
@@ -336,7 +459,7 @@
 
   align-items: center;
 
-  min-height: 258px;
+  min-height: 245px;
 
   background: var(--green);
 
@@ -350,14 +473,15 @@
 }
 
 .mht-equipment__cta:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 
   box-shadow:
-    0 14px 32px rgba(0, 0, 0, 0.25);
+    0 15px 35px rgba(52, 73, 94, 0.14);
 }
 
-
-/* Decorative circle */
+/* =========================================================
+   CTA DECORATIVE CIRCLES
+========================================================= */
 
 .mht-equipment__cta::before {
   content: "";
@@ -370,7 +494,7 @@
   right: -180px;
   bottom: -190px;
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
 
   border-radius: 50%;
 }
@@ -386,15 +510,14 @@
   right: -95px;
   bottom: -125px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.11);
 
   border-radius: 50%;
 }
 
-
 /* =========================================================
    CTA CONTENT
-   ========================================================= */
+========================================================= */
 
 .mht-equipment__cta-content {
   position: relative;
@@ -403,16 +526,19 @@
 
   width: 100%;
 
-  padding: 38px 44px;
+  padding: 34px 40px;
 }
 
-
-/* CTA eyebrow */
+/* =========================================================
+   CTA EYEBROW
+========================================================= */
 
 .mht-equipment__cta-eyebrow {
-  margin: 0 0 13px;
+  margin: 0 0 11px;
 
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.82);
+
+  font-family: Cambria, Georgia, serif;
 
   font-size: 12px;
 
@@ -421,10 +547,13 @@
   letter-spacing: 1.8px;
 
   line-height: 1.2;
+
+  text-transform: uppercase;
 }
 
-
-/* CTA heading */
+/* =========================================================
+   CTA TITLE
+========================================================= */
 
 .mht-equipment__cta h3 {
   max-width: 620px;
@@ -433,53 +562,56 @@
 
   color: var(--white);
 
-  font-size: 31px;
+  font-family: Cambria, Georgia, serif;
+
+  font-size: 30px;
 
   font-weight: 700;
 
   line-height: 1.15;
 }
 
-
-/* CTA paragraph */
+/* =========================================================
+   CTA PARAGRAPH
+========================================================= */
 
 .mht-equipment__cta-content > p:not(
   .mht-equipment__cta-eyebrow
 ) {
   max-width: 650px;
 
-  margin: 16px 0 24px;
+  margin: 14px 0 21px;
 
   color: rgba(255, 255, 255, 0.88);
 
+  font-family: Cambria, Georgia, serif;
+
   font-size: 15px;
 
-  line-height: 1.65;
+  line-height: 1.6;
 }
-
 
 /* =========================================================
    CTA BUTTON
-   ========================================================= */
+========================================================= */
 
 .mht-equipment__cta-button {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
-  gap: 16px;
+  gap: 15px;
 
-  min-height: 48px;
+  min-height: 46px;
 
-  padding: 0 24px;
+  padding: 0 22px;
 
   color: var(--white);
 
   background: var(--blue);
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: none;
 
   border-radius: 6px;
 
@@ -518,18 +650,23 @@
   transform: translateX(4px);
 }
 
-
 /* =========================================================
    LARGE DESKTOP
-   ========================================================= */
+========================================================= */
 
 @media (min-width: 1600px) {
-
   .mht-equipment__container {
     width: min(1650px, calc(100% - 60px));
 
-    padding-top: 82px;
-    padding-bottom: 90px;
+    padding-top: 65px;
+
+    padding-bottom: 80px;
+  }
+
+  .mht-equipment__header {
+    max-width: 1000px;
+
+    margin-bottom: 48px;
   }
 
   .mht-equipment__title {
@@ -537,30 +674,34 @@
   }
 
   .mht-equipment__grid {
-    gap: 30px;
+    gap: 24px;
   }
 
   .mht-equipment__card,
   .mht-equipment__cta {
-    min-height: 270px;
+    min-height: 260px;
   }
 
   .mht-equipment__image-wrap {
-    height: 270px;
+    height: 260px;
   }
 }
 
-
 /* =========================================================
    LAPTOP
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 1200px) {
-
   .mht-equipment__container {
     width: calc(100% - 36px);
 
-    padding: 65px 0 75px;
+    padding: 52px 0 65px;
+  }
+
+  .mht-equipment__header {
+    max-width: 850px;
+
+    margin-bottom: 38px;
   }
 
   .mht-equipment__title {
@@ -568,25 +709,25 @@
   }
 
   .mht-equipment__grid {
-    gap: 22px;
+    gap: 18px;
   }
 
   .mht-equipment__card {
     grid-template-columns: 42% 58%;
 
-    min-height: 245px;
+    min-height: 235px;
   }
 
   .mht-equipment__image-wrap {
-    height: 245px;
+    height: 235px;
   }
 
   .mht-equipment__content {
-    padding: 27px 28px;
+    padding: 25px 27px;
   }
 
   .mht-equipment__content h3 {
-    font-size: 22px;
+    font-size: 21px;
   }
 
   .mht-equipment__content p {
@@ -594,24 +735,29 @@
   }
 
   .mht-equipment__cta {
-    min-height: 245px;
+    min-height: 235px;
   }
 
   .mht-equipment__cta-content {
-    padding: 32px 34px;
+    padding: 30px 32px;
   }
 
   .mht-equipment__cta h3 {
-    font-size: 28px;
+    font-size: 27px;
   }
 }
 
-
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 900px) {
+  .mht-equipment__header {
+    max-width: 720px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .mht-equipment__grid {
     grid-template-columns: 1fr;
@@ -624,51 +770,70 @@
   }
 
   .mht-equipment__cta {
-    min-height: 245px;
+    min-height: 230px;
   }
 }
 
-
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 768px) {
-
   .mht-equipment__container {
     width: calc(100% - 28px);
 
-    padding: 55px 0 65px;
+    padding: 44px 0 55px;
   }
 
   .mht-equipment__header {
-    margin-bottom: 35px;
+    max-width: 650px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
   }
 
   .mht-equipment__eyebrow {
-    margin-bottom: 18px;
+    justify-content: center;
 
-    font-size: 12px;
+    gap: 10px;
 
-    letter-spacing: 2px;
+    margin-bottom: 15px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.8px;
+
+    text-align: center;
   }
 
   .mht-equipment__eyebrow::before {
-    width: 30px;
+    width: 27px;
   }
 
   .mht-equipment__title {
+    max-width: 620px;
+
+    margin-left: auto;
+    margin-right: auto;
+
     font-size: 34px;
 
-    line-height: 1.12;
+    line-height: 1.1;
+
+    text-align: center;
   }
 
   .mht-equipment__intro {
-    margin-top: 15px;
+    max-width: 600px;
+
+    margin: 13px auto 0;
 
     font-size: 14px;
 
-    line-height: 1.65;
+    line-height: 1.6;
+
+    text-align: center;
   }
 
   .mht-equipment__card {
@@ -682,33 +847,33 @@
   .mht-equipment__image-wrap {
     width: 100%;
 
-    height: 235px;
+    height: 220px;
   }
 
   .mht-equipment__content {
-    padding: 27px 25px 29px;
+    padding: 24px 23px 27px;
   }
 
   .mht-equipment__number {
-    margin-bottom: 13px;
+    margin-bottom: 11px;
 
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .mht-equipment__content h3 {
-    font-size: 22px;
+    font-size: 21px;
   }
 
   .mht-equipment__content p {
-    margin-top: 13px;
+    margin-top: 11px;
 
     font-size: 14px;
 
-    line-height: 1.65;
+    line-height: 1.6;
   }
 
   .mht-equipment__line {
-    margin-top: 19px;
+    margin-top: 17px;
   }
 
   .mht-equipment__cta {
@@ -716,47 +881,75 @@
   }
 
   .mht-equipment__cta-content {
-    padding: 35px 26px 38px;
+    padding: 31px 24px 34px;
   }
 
   .mht-equipment__cta h3 {
-    font-size: 28px;
+    font-size: 27px;
   }
 
   .mht-equipment__cta-content > p:not(
     .mht-equipment__cta-eyebrow
   ) {
-    margin-top: 15px;
+    margin-top: 14px;
 
     font-size: 14px;
 
-    line-height: 1.65;
+    line-height: 1.6;
   }
 }
 
-
 /* =========================================================
    SMALL MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 480px) {
-
   .mht-equipment__container {
     width: calc(100% - 20px);
 
-    padding: 48px 0 55px;
+    padding: 39px 0 48px;
+  }
+
+  .mht-equipment__header {
+    margin-bottom: 27px;
+  }
+
+  .mht-equipment__eyebrow {
+    gap: 8px;
+
+    margin-bottom: 14px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .mht-equipment__eyebrow::before {
+    width: 23px;
   }
 
   .mht-equipment__title {
+    max-width: 360px;
+
     font-size: 30px;
+
+    line-height: 1.12;
+  }
+
+  .mht-equipment__intro {
+    max-width: 360px;
+
+    margin-top: 13px;
+
+    font-size: 13.5px;
   }
 
   .mht-equipment__image-wrap {
-    height: 210px;
+    height: 205px;
   }
 
   .mht-equipment__content {
-    padding: 24px 21px 27px;
+    padding: 22px 20px 25px;
   }
 
   .mht-equipment__content h3 {
@@ -768,11 +961,11 @@
   }
 
   .mht-equipment__cta-content {
-    padding: 30px 22px 34px;
+    padding: 28px 20px 31px;
   }
 
   .mht-equipment__cta h3 {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   .mht-equipment__cta-button {
@@ -780,55 +973,79 @@
   }
 }
 
-
 /* =========================================================
    EXTRA SMALL
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 360px) {
-
   .mht-equipment__container {
     width: calc(100% - 16px);
+
+    padding: 35px 0 43px;
+  }
+
+  .mht-equipment__header {
+    margin-bottom: 25px;
+  }
+
+  .mht-equipment__eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 1.2px;
+  }
+
+  .mht-equipment__eyebrow::before {
+    width: 21px;
   }
 
   .mht-equipment__title {
+    max-width: 320px;
+
     font-size: 27px;
+
+    line-height: 1.12;
+  }
+
+  .mht-equipment__intro {
+    max-width: 320px;
+
+    font-size: 13px;
+
+    line-height: 1.55;
   }
 
   .mht-equipment__image-wrap {
-    height: 195px;
+    height: 190px;
   }
 
   .mht-equipment__content {
-    padding: 22px 18px 25px;
+    padding: 20px 17px 23px;
   }
 
   .mht-equipment__cta-content {
-    padding: 28px 19px 31px;
+    padding: 26px 18px 29px;
   }
 
   .mht-equipment__cta h3 {
-    font-size: 23px;
+    font-size: 22px;
   }
 }
 
-
 /* =========================================================
    ACCESSIBILITY
-   ========================================================= */
+========================================================= */
 
 .mht-equipment__cta-button:focus-visible {
   outline: 3px solid var(--yellow);
+
   outline-offset: 3px;
 }
 
-
 /* =========================================================
    REDUCED MOTION
-   ========================================================= */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   .mht-equipment__card,
   .mht-equipment__image,
   .mht-equipment__line,
