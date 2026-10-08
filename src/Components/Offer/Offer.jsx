@@ -32,13 +32,13 @@ const offerItems = [
     image: ultrasonicImage,
     title: "CNG Cylinder Ultra Sonic Flaw Detector",
     description:
-      "Advanced ultrasonic flaw detection to identify internal or material defects.",
+      "Advanced ultrasonic Flaw Detector to identify external cylinder defects.",
   },
   {
     image: cameraImage,
     title: "Internal Inspection with Advanced Camera",
     description:
-      "Internal inspection using an advanced camera to check the inner surface and detect abnormalities.",
+      "Internal inspection using an advanced camera to detect any internal cracks or abnormalities.",
   },
   {
     image: dryingImage,
