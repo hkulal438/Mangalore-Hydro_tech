@@ -217,7 +217,7 @@ const Find = () => {
 
 
               <h3>
-                Mangalore Hydro Testing
+                Mangalore Hydro Tech
               </h3>
 
               <p>
