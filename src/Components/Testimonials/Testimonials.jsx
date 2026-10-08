@@ -1,16 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Testimonials.css";
 
 const GOOGLE_REVIEWS_URL =
   "https://share.google/GYRxtpxreQxIPH9Fw";
 
-/*
-  IMPORTANT:
-  Preetham's review below is the exact text provided.
-  The other three reviews are drafted sample text based
-  on the service. Do not present them as exact Google
-  review quotations unless verified.
-*/
 
 const googleReviews = [
   {
@@ -52,8 +45,25 @@ const Testimonials = () => {
   const currentReview = googleReviews[activeIndex];
 
   /* =========================================================
+     AUTOMATIC SLIDER
+     Each review stays for 8 seconds
+     ========================================================= */
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) =>
+        prevIndex === googleReviews.length - 1
+          ? 0
+          : prevIndex + 1
+      );
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  /* =========================================================
      NEXT REVIEW
-  ========================================================= */
+     ========================================================= */
 
   const nextReview = () => {
     setActiveIndex((prevIndex) =>
@@ -65,7 +75,7 @@ const Testimonials = () => {
 
   /* =========================================================
      PREVIOUS REVIEW
-  ========================================================= */
+     ========================================================= */
 
   const previousReview = () => {
     setActiveIndex((prevIndex) =>
@@ -77,7 +87,7 @@ const Testimonials = () => {
 
   /* =========================================================
      SELECT REVIEW
-  ========================================================= */
+     ========================================================= */
 
   const goToReview = (index) => {
     setActiveIndex(index);
@@ -102,9 +112,7 @@ const Testimonials = () => {
         >
           <div className="mht-testimonials__eyebrow">
             <span></span>
-
             <p>GOOGLE REVIEWS</p>
-
             <span></span>
           </div>
 
@@ -353,11 +361,10 @@ const Testimonials = () => {
               <button
                 key={`${review.name}-${index}`}
                 type="button"
-                className={`mht-testimonials__dot ${
-                  index === activeIndex
+                className={`mht-testimonials__dot ${index === activeIndex
                     ? "active"
                     : ""
-                }`}
+                  }`}
                 onClick={() => goToReview(index)}
                 aria-label={`View review by ${review.name}`}
                 aria-current={
