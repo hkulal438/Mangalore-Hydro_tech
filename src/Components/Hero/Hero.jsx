@@ -132,7 +132,7 @@ const Hero = () => {
                   data-swiper-parallax-y="-150"
                   data-swiper-parallax-duration="1200"
                 >
-                  Comprehensive CNG Cylinder
+                  Advanced CNG Cylinder
                   <br />
                   Testing, Inspection &{" "}
                   <span>Safety Services</span>
@@ -170,6 +170,24 @@ const Hero = () => {
                       <path d="M18 9l7 7-7 7" />
                     </svg>
                   </a>
+                </div>
+
+                {/* PESO Approval Badge */}
+                <div
+                  className="mht-hero__peso"
+                  data-swiper-parallax-y="-280"
+                  data-swiper-parallax-duration="1600"
+                >
+                  <div className="mht-hero__peso-icon">
+                    ✓
+                  </div>
+
+                  <div className="mht-hero__peso-content">
+                    <strong>PESO APPROVED</strong>
+                    <span>
+                      Petroleum and Explosives Safety Organisation
+                    </span>
+                  </div>
                 </div>
 
               </div>
