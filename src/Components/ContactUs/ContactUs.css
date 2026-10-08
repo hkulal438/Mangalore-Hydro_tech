@@ -1,30 +1,43 @@
 /* =========================================================
-   MANGALORE HYDRO TESTING
+   MANGALORE HYDRO TECH
    CONTACT US
-   ========================================================= */
+   PREMIUM LIGHT VERSION
+========================================================= */
 
 .mht-contact {
+  --yellow: #f4d35e;
+  --green: #00a651;
+  --green-dark: #008f46;
+  --blue: #34495e;
+  --blue-dark: #273946;
+  --white: #ffffff;
+
+  --text: #34495e;
+  --text-muted: #60717c;
+
+  --background: #f7f9f8;
+  --soft-green: #f1f8f4;
+
+  --border: rgba(52, 73, 94, 0.1);
+
   position: relative;
+
   width: 100%;
-  padding: 100px 22px 110px;
 
-  background:
-    radial-gradient(
-      circle at 10% 15%,
-      rgba(0, 166, 81, 0.055),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 90% 85%,
-      rgba(244, 211, 94, 0.045),
-      transparent 30%
-    ),
-    #101820;
+  padding: 55px 22px 70px;
 
-  overflow: hidden;
+  background: var(--background);
+
+  color: var(--text);
 
   font-family: Cambria, Georgia, serif;
+
+  overflow: hidden;
 }
+
+/* =========================================================
+   RESET
+========================================================= */
 
 .mht-contact *,
 .mht-contact *::before,
@@ -32,89 +45,172 @@
   box-sizing: border-box;
 }
 
+/* =========================================================
+   SUBTLE BACKGROUND
+========================================================= */
+
+.mht-contact::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(0, 166, 81, 0.045),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(244, 211, 94, 0.055),
+      transparent 27%
+    );
+}
+
+/* =========================================================
+   TOP ACCENT
+========================================================= */
+
+.mht-contact::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 75px;
+  height: 3px;
+
+  transform: translateX(-50%);
+
+  background: var(--green);
+}
 
 /* =========================================================
    HEADER
-   ========================================================= */
+========================================================= */
 
 .mht-contact__header {
+  position: relative;
+
+  z-index: 1;
+
   width: 100%;
+
   max-width: 900px;
 
-  margin: 0 auto 70px;
+  margin: 0 auto 42px;
 
   text-align: center;
 }
 
+/* =========================================================
+   EYEBROW
+========================================================= */
+
 .mht-contact__eyebrow {
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  gap: 14px;
+  gap: 13px;
 
-  margin-bottom: 20px;
+  margin: 0 0 15px;
 }
 
 .mht-contact__eyebrow span {
-  width: 40px;
-  height: 2px;
-
   display: block;
 
-  background: #00a651;
+  width: 32px;
+  height: 2px;
+
+  flex-shrink: 0;
+
+  background: var(--yellow);
 }
 
 .mht-contact__eyebrow p {
   margin: 0;
 
-  color: #f4d35e;
+  color: var(--green);
 
   font-family: Cambria, Georgia, serif;
 
-  font-size: 14px;
+  font-size: 13px;
+
   font-weight: 700;
 
-  letter-spacing: 2.5px;
+  letter-spacing: 2.4px;
+
+  line-height: 1.2;
+
+  text-align: center;
 }
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
 
 .mht-contact__header h2 {
   margin: 0;
 
-  color: #ffffff;
+  color: var(--blue);
 
   font-family: Cambria, Georgia, serif;
 
-  font-size: 50px;
-  line-height: 1.1;
+  font-size: clamp(38px, 3.8vw, 56px);
+
+  line-height: 1.08;
 
   font-weight: 700;
+
+  letter-spacing: -0.5px;
+
+  text-align: center;
 }
 
 .mht-contact__header h2 span {
-  color: #00a651;
+  color: var(--green);
 }
 
+/* =========================================================
+   SUBHEADING
+========================================================= */
+
 .mht-contact__header > p {
-  max-width: 820px;
+  max-width: 760px;
 
-  margin: 22px auto 0;
+  margin: 15px auto 0;
 
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--text-muted);
 
   font-family: Cambria, Georgia, serif;
 
-  font-size: 18px;
-  line-height: 1.65;
-}
+  font-size: 16px;
 
+  line-height: 1.6;
+
+  text-align: center;
+}
 
 /* =========================================================
    MAIN GRID
-   ========================================================= */
+========================================================= */
 
 .mht-contact__container {
+  position: relative;
+
+  z-index: 1;
+
   width: 100%;
+
   max-width: 1360px;
 
   margin: 0 auto;
@@ -125,289 +221,359 @@
     minmax(0, 1fr)
     minmax(0, 1fr);
 
-  gap: 60px;
+  gap: 30px;
 
   align-items: start;
 }
 
-
 /* =========================================================
    LEFT SIDE
-   ========================================================= */
+========================================================= */
 
 .mht-contact__left {
   width: 100%;
 
   display: flex;
+
   flex-direction: column;
 
-  gap: 28px;
+  gap: 15px;
 }
-
 
 /* =========================================================
    CONTACT CARD
-   ========================================================= */
+========================================================= */
 
 .mht-contact__card {
+  position: relative;
+
   width: 100%;
-  min-height: 132px;
+
+  min-height: 120px;
 
   display: flex;
+
   align-items: center;
 
-  gap: 25px;
+  gap: 20px;
 
-  padding: 26px 30px;
+  padding: 24px 26px;
 
-  background: #1b252d;
+  background: var(--white);
 
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid var(--border);
 
-  border-radius: 12px;
+  border-radius: 10px;
+
+  box-shadow:
+    0 8px 25px rgba(52, 73, 94, 0.055);
+
+  overflow: hidden;
 
   transition:
     border-color 0.25s ease,
     transform 0.25s ease,
-    background 0.25s ease;
+    box-shadow 0.25s ease;
+}
+
+/* Green side accent */
+
+.mht-contact__card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background: var(--green);
+
+  opacity: 0;
+
+  transition: opacity 0.25s ease;
 }
 
 .mht-contact__card:hover {
-  background: #202c34;
+  border-color: rgba(0, 166, 81, 0.25);
 
-  border-color: rgba(0, 166, 81, 0.40);
+  transform: translateY(-3px);
 
-  transform: translateY(-2px);
+  box-shadow:
+    0 14px 32px rgba(52, 73, 94, 0.09);
 }
 
+.mht-contact__card:hover::before {
+  opacity: 1;
+}
 
 /* =========================================================
    CONTACT ICON
-   ========================================================= */
+========================================================= */
 
 .mht-contact__icon {
-  width: 60px;
-  height: 60px;
+  width: 58px;
+  height: 58px;
 
-  flex: 0 0 60px;
+  flex: 0 0 58px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  background: #00a651;
+  background: var(--soft-green);
 
-  border-radius: 8px;
+  border: 1px solid rgba(0, 166, 81, 0.18);
 
-  color: #ffffff;
+  border-radius: 9px;
+
+  color: var(--green);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .mht-contact__icon svg {
-  width: 31px;
-  height: 31px;
+  width: 29px;
+  height: 29px;
 
   display: block;
+
+  stroke: currentColor;
 }
 
+.mht-contact__card:hover .mht-contact__icon {
+  background: var(--green);
+
+  border-color: var(--green);
+
+  color: var(--white);
+}
 
 /* =========================================================
    CONTACT CONTENT
-   ========================================================= */
+========================================================= */
 
 .mht-contact__card-content {
   min-width: 0;
 
   display: flex;
+
   flex-direction: column;
 
-  gap: 10px;
+  gap: 7px;
 }
 
 .mht-contact__card-content h3 {
   margin: 0;
 
-  color: #f4d35e;
+  color: var(--blue);
 
   font-family: Cambria, Georgia, serif;
 
   font-size: 14px;
+
   font-weight: 700;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
 }
 
 .mht-contact__card-content p {
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.90);
+  color: var(--text-muted);
 
-  font-size: 17px;
+  font-family: Cambria, Georgia, serif;
 
-  line-height: 1.65;
+  font-size: 16px;
+
+  line-height: 1.55;
 }
 
 .mht-contact__card-content a {
   width: fit-content;
 
-  color: #ffffff;
+  color: var(--text-muted);
 
   font-family: Cambria, Georgia, serif;
 
-  font-size: 17px;
+  font-size: 16px;
 
   line-height: 1.5;
 
   text-decoration: none;
 
-  transition: color 0.25s ease;
+  transition:
+    color 0.25s ease;
 }
 
 .mht-contact__card-content a:hover {
-  color: #00a651;
+  color: var(--green);
 }
-
 
 /* =========================================================
    PHONE LIST
-   ========================================================= */
+========================================================= */
 
 .mht-contact__phone-list {
   display: flex;
+
   flex-direction: column;
 
-  gap: 5px;
+  gap: 3px;
 }
-
 
 /* =========================================================
    CALL BUTTON
-   ========================================================= */
+========================================================= */
 
 .mht-contact__call-button {
   width: 100%;
-  min-height: 62px;
+
+  min-height: 58px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  gap: 13px;
+  gap: 12px;
 
   margin-top: 2px;
 
-  background: #00a651;
+  background: var(--green);
 
-  border: 2px solid #00a651;
+  border: 2px solid var(--green);
 
-  border-radius: 8px;
+  border-radius: 7px;
 
-  color: #ffffff;
+  color: var(--white);
 
   font-family: Cambria, Georgia, serif;
 
-  font-size: 17px;
+  font-size: 16px;
 
   font-weight: 700;
 
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 
   text-decoration: none;
 
   transition:
     background 0.25s ease,
     border-color 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .mht-contact__call-button svg {
-  width: 23px;
-  height: 23px;
+  width: 22px;
+  height: 22px;
 }
 
 .mht-contact__call-button:hover {
-  background: #008f46;
+  background: var(--green-dark);
 
-  border-color: #008f46;
+  border-color: var(--green-dark);
 
   transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 166, 81, 0.18);
 }
 
 .mht-contact__button-arrow {
-  font-size: 20px;
+  font-size: 19px;
 
   margin-left: 3px;
 }
 
-
 /* =========================================================
    FORM WRAPPER
-   ========================================================= */
+========================================================= */
 
 .mht-contact__form-wrapper {
   width: 100%;
 
-  padding: 36px 40px 40px;
+  padding: 30px 34px 34px;
 
-  background: #1b252d;
+  background: var(--white);
 
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid var(--border);
 
-  border-radius: 12px;
+  border-radius: 10px;
 
   box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.20);
+    0 10px 30px rgba(52, 73, 94, 0.06);
 }
-
 
 /* =========================================================
    FORM
-   ========================================================= */
+========================================================= */
 
 .mht-contact__form {
   width: 100%;
 
   display: flex;
+
   flex-direction: column;
 
-  gap: 22px;
+  gap: 18px;
 }
-
 
 /* =========================================================
    FIELD
-   ========================================================= */
+========================================================= */
 
 .mht-contact__field {
   width: 100%;
 
   display: flex;
+
   flex-direction: column;
 
-  gap: 9px;
+  gap: 7px;
 }
 
 .mht-contact__field label {
-  color: #ffffff;
+  color: var(--blue);
 
   font-family: Cambria, Georgia, serif;
 
-  font-size: 16px;
+  font-size: 15px;
+
+  font-weight: 700;
 
   line-height: 1.4;
 }
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+========================================================= */
 
 .mht-contact__field input,
 .mht-contact__field select,
 .mht-contact__field textarea {
   width: 100%;
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(52, 73, 94, 0.16);
 
   border-radius: 7px;
 
-  background: #182127;
+  background: #f9fbfa;
 
-  color: #ffffff;
+  color: var(--blue);
 
   font-family: Cambria, Georgia, serif;
 
@@ -423,22 +589,22 @@
 
 .mht-contact__field input,
 .mht-contact__field select {
-  height: 60px;
+  height: 55px;
 
-  padding: 0 20px;
+  padding: 0 17px;
 }
 
 .mht-contact__field textarea {
-  min-height: 128px;
+  min-height: 120px;
 
-  padding: 17px 20px;
+  padding: 15px 17px;
 
   resize: vertical;
 }
 
 .mht-contact__field input::placeholder,
 .mht-contact__field textarea::placeholder {
-  color: #7f91a4;
+  color: #8796a0;
 
   opacity: 1;
 }
@@ -450,59 +616,60 @@
 }
 
 .mht-contact__field select option {
-  background: #182127;
+  background: var(--white);
 
-  color: #ffffff;
+  color: var(--blue);
 
   font-family: Cambria, Georgia, serif;
 }
 
-
 /* =========================================================
    FOCUS
-   ========================================================= */
+========================================================= */
 
 .mht-contact__field input:focus,
 .mht-contact__field select:focus,
 .mht-contact__field textarea:focus {
-  border-color: #00a651;
+  border-color: var(--green);
 
-  background: #1c272e;
+  background: var(--white);
 
   box-shadow:
-    0 0 0 3px rgba(0, 166, 81, 0.13);
+    0 0 0 3px rgba(0, 166, 81, 0.1);
 }
-
 
 /* =========================================================
    SUBMIT BUTTON
-   ========================================================= */
+========================================================= */
 
 .mht-contact__submit {
   width: 100%;
-  min-height: 62px;
+
+  min-height: 58px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  gap: 12px;
+  gap: 11px;
 
   margin-top: 2px;
 
-  padding: 0 25px;
+  padding: 0 24px;
 
-  border: 2px solid #00a651;
+  border: 2px solid var(--green);
 
   border-radius: 7px;
 
-  background: #00a651;
+  background: var(--green);
 
-  color: #ffffff;
+  color: var(--white);
 
   font-family: Cambria, Georgia, serif;
 
-  font-size: 17px;
+  font-size: 16px;
 
   font-weight: 700;
 
@@ -518,37 +685,42 @@
 }
 
 .mht-contact__submit svg {
-  width: 22px;
-  height: 22px;
+  width: 21px;
+  height: 21px;
 }
 
 .mht-contact__submit:hover {
-  background: #008f46;
+  background: var(--green-dark);
 
-  border-color: #008f46;
+  border-color: var(--green-dark);
 
   transform: translateY(-2px);
 
   box-shadow:
-    0 10px 25px rgba(0, 166, 81, 0.20);
+    0 10px 25px rgba(0, 166, 81, 0.18);
 }
 
 .mht-contact__submit-arrow {
-  font-size: 20px;
+  font-size: 19px;
 
   margin-left: 2px;
 }
 
-
 /* =========================================================
    LARGE DESKTOP
-   ========================================================= */
+========================================================= */
 
 @media (min-width: 1600px) {
-
   .mht-contact {
-    padding-top: 120px;
-    padding-bottom: 125px;
+    padding-top: 65px;
+
+    padding-bottom: 80px;
+  }
+
+  .mht-contact__header {
+    max-width: 1000px;
+
+    margin-bottom: 48px;
   }
 
   .mht-contact__header h2 {
@@ -558,33 +730,31 @@
   .mht-contact__container {
     max-width: 1500px;
 
-    gap: 70px;
+    gap: 40px;
   }
 
   .mht-contact__card {
-    min-height: 140px;
+    min-height: 130px;
 
-    padding: 28px 32px;
+    padding: 27px 30px;
   }
 
   .mht-contact__form-wrapper {
-    padding: 42px 45px 45px;
+    padding: 36px 40px 40px;
   }
 }
 
-
 /* =========================================================
-   TABLET
-   ========================================================= */
+   LAPTOP / TABLET
+========================================================= */
 
 @media (max-width: 1100px) {
-
   .mht-contact {
-    padding: 85px 20px 95px;
+    padding: 50px 20px 65px;
   }
 
   .mht-contact__header {
-    margin-bottom: 55px;
+    margin-bottom: 38px;
   }
 
   .mht-contact__header h2 {
@@ -592,40 +762,38 @@
   }
 
   .mht-contact__container {
-    gap: 35px;
+    gap: 24px;
   }
 
   .mht-contact__card {
-    gap: 18px;
+    gap: 17px;
 
-    padding: 22px;
+    padding: 21px;
   }
 
   .mht-contact__icon {
-    width: 55px;
-    height: 55px;
+    width: 54px;
+    height: 54px;
 
-    flex-basis: 55px;
+    flex-basis: 54px;
   }
 
   .mht-contact__form-wrapper {
-    padding: 30px;
+    padding: 28px;
   }
 }
 
-
 /* =========================================================
    TABLET / MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 800px) {
-
   .mht-contact {
-    padding: 75px 18px 85px;
+    padding: 45px 18px 55px;
   }
 
   .mht-contact__header {
-    margin-bottom: 45px;
+    margin-bottom: 32px;
   }
 
   .mht-contact__header h2 {
@@ -633,37 +801,43 @@
   }
 
   .mht-contact__header > p {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .mht-contact__container {
     grid-template-columns: 1fr;
 
-    gap: 30px;
+    gap: 22px;
   }
 
   .mht-contact__left {
-    gap: 20px;
+    gap: 14px;
   }
 
   .mht-contact__form-wrapper {
-    padding: 30px 25px 32px;
+    padding: 27px 23px 30px;
   }
 }
 
-
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 600px) {
-
   .mht-contact {
-    padding: 65px 14px 75px;
+    padding: 40px 14px 50px;
+  }
+
+  .mht-contact__header {
+    margin-bottom: 30px;
+
+    text-align: center;
   }
 
   .mht-contact__eyebrow {
     gap: 9px;
+
+    margin-bottom: 14px;
   }
 
   .mht-contact__eyebrow span {
@@ -671,129 +845,136 @@
   }
 
   .mht-contact__eyebrow p {
-    font-size: 11px;
+    font-size: 10px;
 
-    letter-spacing: 1.7px;
+    letter-spacing: 1.6px;
   }
 
   .mht-contact__header h2 {
     font-size: 34px;
+
+    line-height: 1.1;
   }
 
   .mht-contact__header > p {
-    margin-top: 17px;
+    margin-top: 15px;
 
-    font-size: 16px;
+    font-size: 15px;
 
-    line-height: 1.6;
+    line-height: 1.55;
   }
 
-  .mht-contact__header {
-    margin-bottom: 38px;
-  }
-
-
-  /* Contact Cards */
+  /* =======================================================
+     CONTACT CARDS
+  ======================================================= */
 
   .mht-contact__card {
     min-height: 0;
 
     align-items: flex-start;
 
-    padding: 20px;
+    padding: 19px;
 
-    gap: 15px;
+    gap: 14px;
+
+    border-radius: 9px;
   }
 
   .mht-contact__icon {
-    width: 50px;
-    height: 50px;
+    width: 49px;
+    height: 49px;
 
-    flex: 0 0 50px;
+    flex: 0 0 49px;
+
+    border-radius: 8px;
   }
 
   .mht-contact__icon svg {
-    width: 27px;
-    height: 27px;
+    width: 26px;
+    height: 26px;
   }
 
   .mht-contact__card-content {
-    gap: 7px;
+    gap: 6px;
   }
 
   .mht-contact__card-content h3 {
-    font-size: 12px;
+    font-size: 11px;
 
-    letter-spacing: 1.7px;
+    letter-spacing: 1.5px;
   }
 
   .mht-contact__card-content p,
   .mht-contact__card-content a {
-    font-size: 15px;
+    font-size: 14px;
 
-    line-height: 1.55;
+    line-height: 1.5;
   }
 
+  /* =======================================================
+     CALL BUTTON
+  ======================================================= */
 
-  /* Form */
+  .mht-contact__call-button {
+    min-height: 55px;
+
+    font-size: 15px;
+  }
+
+  /* =======================================================
+     FORM
+  ======================================================= */
 
   .mht-contact__form-wrapper {
-    padding: 25px 18px 22px;
+    padding: 24px 18px 25px;
 
-    border-radius: 10px;
+    border-radius: 9px;
   }
 
   .mht-contact__form {
-    gap: 19px;
+    gap: 17px;
   }
 
   .mht-contact__field {
-    gap: 8px;
+    gap: 7px;
   }
 
   .mht-contact__field label {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .mht-contact__field input,
   .mht-contact__field select {
-    height: 55px;
+    height: 53px;
 
-    padding: 0 16px;
+    padding: 0 15px;
 
     font-size: 15px;
   }
 
   .mht-contact__field textarea {
-    min-height: 120px;
+    min-height: 115px;
 
-    padding: 15px 16px;
+    padding: 14px 15px;
 
     font-size: 15px;
   }
 
   .mht-contact__submit {
-    min-height: 57px;
-
-    font-size: 15px;
-  }
-
-  .mht-contact__call-button {
-    min-height: 57px;
+    min-height: 55px;
 
     font-size: 15px;
   }
 }
 
-
 /* =========================================================
    SMALL MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 400px) {
-
   .mht-contact {
     padding-left: 11px;
+
     padding-right: 11px;
   }
 
@@ -814,7 +995,7 @@
 
   .mht-contact__card-content p,
   .mht-contact__card-content a {
-    font-size: 14px;
+    font-size: 13.5px;
   }
 
   .mht-contact__form-wrapper {
@@ -827,13 +1008,23 @@
   }
 }
 
-
 /* =========================================================
    ACCESSIBILITY
-   ========================================================= */
+========================================================= */
+
+.mht-contact__submit:focus-visible,
+.mht-contact__call-button:focus-visible,
+.mht-contact__card-content a:focus-visible {
+  outline: 3px solid var(--yellow);
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   .mht-contact *,
   .mht-contact *::before,
   .mht-contact *::after {

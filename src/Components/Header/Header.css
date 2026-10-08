@@ -87,11 +87,15 @@ body {
    Natural aspect ratio is preserved.
    ========================================================= */
 
+/* =========================================================
+   HEADER LOGO — SHARP & HIGHLIGHTED
+========================================================= */
+
 .mht-header__logo {
-  width: 175px;
+  width: 180px;
   height: 84px;
 
-  flex: 0 0 175px;
+  flex: 0 0 180px;
 
   display: flex;
   align-items: center;
@@ -104,33 +108,59 @@ body {
 
   text-decoration: none !important;
 
-  overflow: hidden;
+  overflow: visible;
+
+  position: relative;
+
+  z-index: 5;
 }
+
+/* =========================================================
+   LOGO IMAGE
+========================================================= */
 
 .mht-header__logo img {
   display: block;
 
-  width: 170px;
+  width: 176px;
   height: auto;
 
-  max-width: 170px;
-  max-height: 80px;
+  max-width: none;
+  max-height: 82px;
 
   object-fit: contain;
   object-position: left center;
 
-  /*
-    Keep browser image interpolation normal.
-    This is better for JPEG logos than forced
-    width + height stretching.
-  */
+  /* Keep natural browser interpolation */
   image-rendering: auto;
+
+  /* Prevent some GPU-related softness */
+  transform: translateZ(0);
 
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+
+  /* Slight visual enhancement */
+  filter:
+    contrast(1.04)
+    saturate(1.04);
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
 }
 
+/* =========================================================
+   LOGO HOVER
+========================================================= */
 
+.mht-header__logo:hover img {
+  transform: scale(1.015) translateZ(0);
+
+  filter:
+    contrast(1.07)
+    saturate(1.06);
+}
 /* =========================================================
    DESKTOP NAVIGATION
    ========================================================= */
