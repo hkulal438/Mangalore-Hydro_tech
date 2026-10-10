@@ -1,33 +1,42 @@
+
 /* =========================================================
-   MANGALORE HYDRO TESTING - FIND US
+   MANGALORE HYDRO TECH — FIND US
+   Live Google Maps Integration
    ========================================================= */
 
 .mht-find {
   width: 100%;
-  padding: 60px 20px 70px;
-  background: #fff;
+  padding: 70px 20px 80px;
   overflow: hidden;
+  background: #ffffff;
+  color: #34495e;
   font-family: Cambria, Georgia, serif;
 }
 
+.mht-find,
 .mht-find *,
 .mht-find *::before,
 .mht-find *::after {
   box-sizing: border-box;
 }
 
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
 .mht-find__container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-
-/* ================= HEADER ================= */
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
 
 .mht-find__header {
-  text-align: center;
   margin-bottom: 38px;
+  text-align: center;
 }
 
 .mht-find__eyebrow {
@@ -39,6 +48,7 @@
 }
 
 .mht-find__eyebrow span {
+  display: block;
   width: 28px;
   height: 2px;
   background: #00a651;
@@ -47,6 +57,7 @@
 .mht-find__eyebrow p {
   margin: 0;
   color: #00a651;
+  font-family: Cambria, Georgia, serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -55,7 +66,9 @@
 .mht-find__header h2 {
   margin: 0;
   color: #34495e;
+  font-family: Cambria, Georgia, serif;
   font-size: 40px;
+  font-weight: 700;
   line-height: 1.15;
 }
 
@@ -63,37 +76,59 @@
   color: #00a651;
 }
 
+.mht-find__subtitle {
+  max-width: 600px;
+  margin: 14px auto 0;
+  color: #607080;
+  font-family: Cambria, Georgia, serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
 
-/* ================= CONTENT ================= */
+/* =========================================================
+   MAIN CONTENT GRID
+   ========================================================= */
 
 .mht-find__content {
   display: grid;
-  grid-template-columns: 0.85fr 1.4fr;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
+  align-items: stretch;
   gap: 25px;
 }
 
-
-/* ================= ADDRESS CARD ================= */
+/* =========================================================
+   LEFT — ADDRESS CARD
+   ========================================================= */
 
 .mht-find__address-card {
-  min-height: 330px;
-  padding: 28px;
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  min-height: 360px;
+  padding: 28px;
+
   background: #101820;
+  border: 1px solid #101820;
   border-radius: 9px;
+
+  box-shadow: 0 12px 30px rgba(16, 24, 32, 0.08);
 }
 
+/* Location icon */
+
 .mht-find__address-icon {
-  width: 52px;
-  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
   margin-bottom: 20px;
+
   background: #00a651;
   border-radius: 7px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .mht-find__address-icon svg {
@@ -101,165 +136,182 @@
   height: 27px;
 }
 
+/* Address content */
+
 .mht-find__address-content {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1;
+  min-width: 0;
 }
 
 .mht-find__address-content h3 {
   margin: 0 0 12px;
   color: #f4d35e;
+  font-family: Cambria, Georgia, serif;
   font-size: 13px;
+  font-weight: 700;
   letter-spacing: 1.8px;
 }
 
-.mht-find__address-content > p {
+.mht-find__address-text {
   margin: 0;
-  color: #fff;
+  color: #ffffff;
+  font-family: Cambria, Georgia, serif;
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
 }
+
+/* =========================================================
+   PHONE LINK
+   ========================================================= */
 
 .mht-find__phone {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 20px;
-  color: #fff;
+  align-self: flex-start;
+  gap: 9px;
+
+  margin-top: 22px;
+  color: #ffffff;
+  font-family: Cambria, Georgia, serif;
   font-size: 15px;
   text-decoration: none;
+
+  transition: color 0.25s ease;
 }
 
 .mht-find__phone svg {
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
   color: #00a651;
 }
 
 .mht-find__phone:hover {
-  color: #00a651;
+  color: #f4d35e;
 }
 
+/* =========================================================
+   GET DIRECTIONS BUTTON
+   ========================================================= */
+
 .mht-find__directions {
-  width: fit-content;
-  min-height: 46px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  align-self: flex-start;
   gap: 9px;
+
+  min-height: 46px;
   margin-top: auto;
-  padding: 0 20px;
+  padding: 12px 20px;
+
   background: #00a651;
   border: 2px solid #00a651;
   border-radius: 6px;
-  color: #fff;
+
+  color: #ffffff;
+  font-family: Cambria, Georgia, serif;
   font-size: 13px;
   font-weight: 700;
+  letter-spacing: 0.4px;
   text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .mht-find__directions:hover {
   background: #008f46;
   border-color: #008f46;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 .mht-find__directions svg {
+  flex-shrink: 0;
   width: 17px;
   height: 17px;
 }
 
-
-/* ================= MAP CARD ================= */
+/* =========================================================
+   RIGHT — LIVE GOOGLE MAP
+   ========================================================= */
 
 .mht-find__map-card {
   position: relative;
-  min-height: 330px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  background: #f7f8f8;
+  width: 100%;
+  min-width: 0;
+  min-height: 360px;
+  height: 100%;
+  overflow: hidden;
+
+  background: #f3f5f6;
   border: 1px solid #dfe4e6;
   border-radius: 9px;
-  overflow: hidden;
+
+  box-shadow: 0 12px 30px rgba(52, 73, 94, 0.08);
 }
 
-.mht-find__map-pattern {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(52,73,94,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(52,73,94,.06) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
+/* Google Maps iframe */
 
-.mht-find__map-location {
-  position: relative;
-  z-index: 2;
+.mht-find__map-card iframe {
+  display: block;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  height: 100%;
+  min-height: 360px;
+  border: 0;
+  border-radius: inherit;
 }
 
-.mht-find__map-pin {
-  width: 62px;
-  height: 62px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 17px;
-  background: #00a651;
-  border-radius: 50%;
-  color: #fff;
-  box-shadow: 0 8px 20px rgba(0,166,81,.18);
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.mht-find__phone:focus-visible,
+.mht-find__directions:focus-visible {
+  outline: 3px solid #f4d35e;
+  outline-offset: 4px;
 }
 
-.mht-find__map-pin svg {
-  width: 31px;
-  height: 31px;
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .mht-find {
+    padding: 85px 24px 90px;
+  }
+
+  .mht-find__container {
+    max-width: 1280px;
+  }
+
+  .mht-find__content {
+    gap: 30px;
+  }
+
+  .mht-find__address-card {
+    padding: 32px;
+  }
+
+  .mht-find__map-card,
+  .mht-find__map-card iframe {
+    min-height: 390px;
+  }
 }
 
-.mht-find__map-location h3 {
-  margin: 0;
-  color: #34495e;
-  font-size: 21px;
-}
-
-.mht-find__map-location > p {
-  margin: 8px 0 0;
-  color: #65737d;
-  font-size: 14px;
-}
-
-.mht-find__map-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  margin-top: 18px;
-  color: #00a651;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.mht-find__map-link:hover {
-  color: #008f46;
-}
-
-.mht-find__map-link svg {
-  width: 17px;
-  height: 17px;
-}
-
-
-/* ================= TABLET ================= */
+/* =========================================================
+   TABLET
+   ========================================================= */
 
 @media (max-width: 800px) {
-
   .mht-find {
-    padding: 50px 16px 60px;
+    padding: 55px 16px 65px;
   }
 
   .mht-find__header {
@@ -270,25 +322,52 @@
     font-size: 34px;
   }
 
-  .mht-find__content {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-    margin: auto;
+  .mht-find__subtitle {
+    font-size: 15px;
   }
 
-  .mht-find__address-card,
+  .mht-find__content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .mht-find__address-card {
+    min-height: 310px;
+    padding: 26px;
+  }
+
+  .mht-find__directions {
+    margin-top: 25px;
+  }
+
   .mht-find__map-card {
-    min-height: 290px;
+    height: 350px;
+    min-height: 350px;
+  }
+
+  .mht-find__map-card iframe {
+    height: 350px;
+    min-height: 350px;
   }
 }
 
-
-/* ================= MOBILE ================= */
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 500px) {
-
   .mht-find {
     padding: 45px 12px 55px;
+  }
+
+  .mht-find__header {
+    margin-bottom: 25px;
+  }
+
+  .mht-find__eyebrow {
+    gap: 8px;
   }
 
   .mht-find__eyebrow span {
@@ -297,10 +376,17 @@
 
   .mht-find__eyebrow p {
     font-size: 10px;
+    letter-spacing: 1.6px;
   }
 
   .mht-find__header h2 {
     font-size: 29px;
+  }
+
+  .mht-find__subtitle {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.55;
   }
 
   .mht-find__content {
@@ -309,33 +395,97 @@
 
   .mht-find__address-card {
     min-height: 300px;
-    padding: 20px;
+    padding: 21px;
+    border-radius: 8px;
   }
 
   .mht-find__address-icon {
     width: 46px;
     height: 46px;
+    margin-bottom: 17px;
   }
 
-  .mht-find__address-content > p {
+  .mht-find__address-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mht-find__address-content h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .mht-find__address-text {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .mht-find__phone {
+    margin-top: 18px;
     font-size: 14px;
   }
 
   .mht-find__directions {
+    align-self: stretch;
     width: 100%;
-    justify-content: center;
+    min-height: 46px;
+    margin-top: 24px;
+    padding: 11px 16px;
+    font-size: 12px;
   }
 
   .mht-find__map-card {
+    height: 300px;
+    min-height: 300px;
+    border-radius: 7px;
+  }
+
+  .mht-find__map-card iframe {
+    height: 300px;
+    min-height: 300px;
+    border-radius: 7px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .mht-find {
+    padding: 40px 10px 48px;
+  }
+
+  .mht-find__header h2 {
+    font-size: 27px;
+  }
+
+  .mht-find__address-card {
+    padding: 18px;
+  }
+
+  .mht-find__address-text {
+    font-size: 13.5px;
+  }
+
+  .mht-find__map-card {
+    height: 270px;
     min-height: 270px;
   }
 
-  .mht-find__map-pin {
-    width: 55px;
-    height: 55px;
+  .mht-find__map-card iframe {
+    height: 270px;
+    min-height: 270px;
   }
+}
 
-  .mht-find__map-location h3 {
-    font-size: 19px;
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .mht-find__phone,
+  .mht-find__directions {
+    transition: none;
   }
 }

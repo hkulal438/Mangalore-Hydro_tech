@@ -1,271 +1,183 @@
+
 /* =========================================================
    MANGALORE HYDRO TECH
    ABOUT SECTION
-========================================================= */
+   ========================================================= */
 
 .mht-about {
   width: 100%;
-
   padding: 110px 0;
-
-  background: #ffffff;
-
-  color: #34495e;
-
-  font-family: Cambria, Georgia, serif;
-
   overflow: hidden;
+  background: #ffffff;
+  color: #34495e;
+  font-family: Cambria, Georgia, serif;
 }
 
+.mht-about,
+.mht-about * {
+  box-sizing: border-box;
+}
 
 /* =========================================================
    MAIN CONTAINER
-========================================================= */
+   ========================================================= */
 
 .mht-about__container {
-  width: 100%;
-
-  max-width: 1440px;
-
-  margin: 0 auto;
-
-  padding: 0 40px;
-
   display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(0, 0.95fr);
-
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  align-items: center;
   column-gap: 80px;
 
-  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
-
 
 /* =========================================================
    LEFT IMAGE AREA
-========================================================= */
+   ========================================================= */
 
 .mht-about__image-area {
   position: relative;
-
   width: 100%;
-
+  min-width: 0;
   padding-bottom: 28px;
 }
 
-
-/* =========================================================
-   IMAGE WRAPPER
-========================================================= */
-
 .mht-about__image-wrap {
   position: relative;
-
   width: 100%;
-
   height: 600px;
-
   overflow: hidden;
-
   background: #f3f5f6;
-
   border-radius: 0 10px 10px 0;
 }
 
-
-/* =========================================================
-   IMAGE
-========================================================= */
+/* Image */
 
 .mht-about__image {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   object-position: center;
-
   transition: transform 0.6s ease;
 }
 
-.mht-about__image-wrap:hover
-.mht-about__image {
+.mht-about__image-wrap:hover .mht-about__image {
   transform: scale(1.025);
 }
 
-
-/* =========================================================
-   IMAGE GREEN ACCENT
-========================================================= */
+/* Green accent */
 
 .mht-about__image-wrap::before {
   content: "";
-
   position: absolute;
-
   top: 0;
   left: 0;
-
   z-index: 2;
 
   width: 7px;
   height: 80px;
-
   background: #00a651;
+  pointer-events: none;
 }
-
 
 /* =========================================================
    EXPERIENCE CARD
-========================================================= */
+   ========================================================= */
 
 .mht-about__experience {
   position: absolute;
-
   right: 30px;
   bottom: 0;
-
   z-index: 5;
 
-  width: 250px;
-
-  min-height: 170px;
-
-  padding: 28px;
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   align-items: flex-start;
 
+  width: 250px;
+  min-height: 170px;
+  padding: 28px;
+
   background: #34495e;
-
   border-radius: 8px;
-
-  box-shadow:
-    0 18px 40px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
-
-
-/* =========================================================
-   EXPERIENCE NUMBER
-========================================================= */
 
 .mht-about__experience strong {
   display: block;
-
   margin: 0;
-
   color: #f4d35e;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 54px;
-
   font-weight: 700;
-
   line-height: 0.95;
 }
 
-
-/* =========================================================
-   EXPERIENCE TEXT
-========================================================= */
-
 .mht-about__experience span {
   display: block;
-
   margin-top: 12px;
-
   color: #ffffff;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 15px;
-
   font-weight: 700;
-
   line-height: 1.35;
-
   letter-spacing: 0.3px;
 }
 
-
 /* =========================================================
    RIGHT CONTENT
-========================================================= */
+   ========================================================= */
 
 .mht-about__content {
   width: 100%;
-
   max-width: 680px;
+  min-width: 0;
 }
-
 
 /* =========================================================
    EYEBROW
-========================================================= */
+   ========================================================= */
 
 .mht-about__eyebrow {
   display: flex;
-
   align-items: center;
-
   gap: 15px;
-
   margin-bottom: 25px;
 
   color: #00a651;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 15px;
-
   font-weight: 700;
-
   letter-spacing: 2.7px;
-
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 .mht-about__eyebrow span {
   display: block;
-
+  flex-shrink: 0;
   width: 42px;
   height: 2px;
-
-  flex-shrink: 0;
-
   background: #00a651;
 }
 
-
 /* =========================================================
    MAIN TITLE
-========================================================= */
+   ========================================================= */
 
 .mht-about__title {
   margin: 0;
-
   padding: 0;
 
   color: #111111;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: clamp(40px, 3.4vw, 56px);
-
   font-weight: 700;
-
   line-height: 1.06;
-
   letter-spacing: -0.7px;
 }
 
@@ -273,26 +185,19 @@
   color: #00a651;
 }
 
-
 /* =========================================================
-   PARAGRAPHS
-========================================================= */
+   DESCRIPTION
+   ========================================================= */
 
 .mht-about__text {
   max-width: 680px;
-
   margin: 27px 0 0;
-
   padding: 0;
 
   color: #34495e;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 18px;
-
   font-weight: 400;
-
   line-height: 1.65;
 }
 
@@ -300,188 +205,147 @@
   margin-top: 23px;
 }
 
-
 /* =========================================================
    BOTTOM INFORMATION ROW
-========================================================= */
+   ========================================================= */
 
 .mht-about__info-row {
-  width: 100%;
-
-  margin-top: 32px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
+  flex-wrap: wrap;
   gap: 25px;
+
+  width: 100%;
+  margin-top: 32px;
 }
 
-
 /* =========================================================
-   PESO APPROVAL
-========================================================= */
+   PESO APPROVAL INFORMATION
+   ========================================================= */
 
 .mht-about__approval {
   display: flex;
-
   align-items: center;
-
   gap: 13px;
+  min-width: 0;
 }
 
+/* PESO logo container */
 
-/* =========================================================
-   PESO ICON
-========================================================= */
-
-.mht-about__approval-icon {
-  width: 52px;
-  height: 52px;
-
-  min-width: 52px;
-
+.mht-about__approval-logo {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
+  flex: 0 0 58px;
 
-  color: #00a651;
+  width: 58px;
+  height: 58px;
+  padding: 4px;
+  overflow: hidden;
 
-  background: rgba(0, 166, 81, 0.08);
-
-  border: 1px solid rgba(0, 166, 81, 0.35);
-
+  background: #ffffff;
+  border: 1px solid rgba(0, 166, 81, 0.25);
   border-radius: 6px;
 }
 
-.mht-about__approval-icon svg {
-  width: 27px;
-  height: 27px;
+/* Actual PESO logo */
 
-  fill: none;
-
-  stroke: currentColor;
-
-  stroke-width: 1.7;
-
-  stroke-linecap: round;
-
-  stroke-linejoin: round;
+.mht-about__approval-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
-
-/* =========================================================
-   PESO TEXT
-========================================================= */
+/* PESO text */
 
 .mht-about__approval-content {
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
+  gap: 4px;
+  min-width: 0;
 }
 
 .mht-about__approval-content strong {
   display: block;
+  margin: 0;
 
   color: #34495e;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 17px;
-
   font-weight: 700;
-
   line-height: 1.2;
 }
 
 .mht-about__approval-content span {
   display: block;
-
-  margin-top: 4px;
+  margin: 0;
 
   color: #607080;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 13px;
-
   font-weight: 400;
-
-  line-height: 1.3;
+  line-height: 1.4;
 }
-
 
 /* =========================================================
    LEARN MORE BUTTON
-========================================================= */
+   ========================================================= */
 
 .mht-about__button {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 15px;
+  flex-shrink: 0;
 
   min-width: 195px;
-
-  height: 54px;
-
+  min-height: 54px;
   padding: 0 23px;
 
   background: #00a651;
-
   color: #ffffff;
-
   text-decoration: none;
-
-  border: none;
-
+  border: 1px solid #00a651;
   border-radius: 5px;
 
   font-family: Cambria, Georgia, serif;
-
   font-size: 15px;
-
   font-weight: 700;
-
   letter-spacing: 0.5px;
 
   transition:
     background 0.3s ease,
+    border-color 0.3s ease,
     transform 0.3s ease;
 }
 
 .mht-about__button:hover {
   background: #008d45;
-
+  border-color: #008d45;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
+.mht-about__button:focus-visible {
+  outline: 3px solid #f4d35e;
+  outline-offset: 4px;
+}
 
-/* =========================================================
-   BUTTON ARROW
-========================================================= */
+/* Button arrow */
 
 .mht-about__button svg {
+  flex-shrink: 0;
   width: 21px;
   height: 21px;
 
   fill: none;
-
   stroke: currentColor;
-
   stroke-width: 2;
-
   stroke-linecap: round;
-
   stroke-linejoin: round;
 
   transition: transform 0.3s ease;
@@ -491,20 +355,17 @@
   transform: translateX(5px);
 }
 
-
 /* =========================================================
-   LARGE DESKTOP
-========================================================= */
+   LARGE DESKTOP — 1600px AND ABOVE
+   ========================================================= */
 
 @media (min-width: 1600px) {
-
   .mht-about {
     padding: 130px 0;
   }
 
   .mht-about__container {
     max-width: 1540px;
-
     column-gap: 100px;
   }
 
@@ -521,20 +382,17 @@
   }
 }
 
-
 /* =========================================================
-   LAPTOP
-========================================================= */
+   LAPTOP — 1200px AND BELOW
+   ========================================================= */
 
 @media (max-width: 1200px) {
-
   .mht-about {
     padding: 90px 0;
   }
 
   .mht-about__container {
     padding: 0 35px;
-
     column-gap: 55px;
   }
 
@@ -544,11 +402,8 @@
 
   .mht-about__experience {
     right: 20px;
-
     width: 225px;
-
     min-height: 155px;
-
     padding: 25px;
   }
 
@@ -562,31 +417,31 @@
 
   .mht-about__text {
     font-size: 17px;
-
     line-height: 1.6;
   }
 
   .mht-about__info-row {
     margin-top: 28px;
+    gap: 20px;
+  }
+
+  .mht-about__button {
+    min-width: 175px;
   }
 }
 
-
 /* =========================================================
-   TABLET
-========================================================= */
+   TABLET — 992px AND BELOW
+   ========================================================= */
 
 @media (max-width: 992px) {
-
   .mht-about {
     padding: 80px 0;
   }
 
   .mht-about__container {
-    grid-template-columns: 1fr 1fr;
-
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     column-gap: 35px;
-
     padding: 0 25px;
   }
 
@@ -596,11 +451,8 @@
 
   .mht-about__experience {
     right: 15px;
-
     width: 205px;
-
     min-height: 140px;
-
     padding: 22px;
   }
 
@@ -613,28 +465,24 @@
   }
 
   .mht-about__eyebrow {
+    gap: 10px;
     margin-bottom: 19px;
-
-    font-size: 13px;
-
-    letter-spacing: 2px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
   }
 
   .mht-about__eyebrow span {
-    width: 32px;
+    width: 30px;
   }
 
   .mht-about__title {
-    font-size: 38px;
-
+    font-size: 36px;
     line-height: 1.08;
   }
 
   .mht-about__text {
     margin-top: 20px;
-
-    font-size: 16px;
-
+    font-size: 15.5px;
     line-height: 1.58;
   }
 
@@ -643,16 +491,16 @@
   }
 
   .mht-about__info-row {
-    margin-top: 26px;
-
     align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 26px;
   }
 
-  .mht-about__approval-icon {
-    width: 46px;
-    height: 46px;
-
-    min-width: 46px;
+  .mht-about__approval-logo {
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
   }
 
   .mht-about__approval-content strong {
@@ -665,69 +513,48 @@
 
   .mht-about__button {
     min-width: 175px;
-
-    height: 50px;
-
+    min-height: 50px;
     font-size: 14px;
   }
 }
 
-
 /* =========================================================
-   MOBILE
-========================================================= */
+   MOBILE — 768px AND BELOW
+   ========================================================= */
 
 @media (max-width: 768px) {
-
   .mht-about {
     padding: 75px 0 80px;
   }
 
   .mht-about__container {
     display: flex;
-
     flex-direction: column;
-
-    padding: 0 20px;
-
     gap: 58px;
+    padding: 0 20px;
   }
 
-
-  /* -----------------------------------------
-     IMAGE
-  ----------------------------------------- */
+  /* Image */
 
   .mht-about__image-area {
     width: 100%;
-
     padding-bottom: 42px;
   }
 
   .mht-about__image-wrap {
     width: 100%;
-
     height: 430px;
-
     border-radius: 0 8px 8px 0;
   }
 
-
-  /* -----------------------------------------
-     EXPERIENCE CARD
-  ----------------------------------------- */
+  /* Experience card */
 
   .mht-about__experience {
     right: 15px;
-
     bottom: 0;
-
     width: 205px;
-
     min-height: 135px;
-
     padding: 21px 23px;
-
     border-radius: 7px;
   }
 
@@ -737,67 +564,44 @@
 
   .mht-about__experience span {
     margin-top: 8px;
-
     font-size: 13px;
-
     line-height: 1.3;
   }
 
-
-  /* -----------------------------------------
-     CONTENT
-  ----------------------------------------- */
+  /* Content */
 
   .mht-about__content {
     width: 100%;
-
     max-width: 100%;
   }
 
-
-  /* -----------------------------------------
-     EYEBROW
-  ----------------------------------------- */
+  /* Eyebrow */
 
   .mht-about__eyebrow {
     gap: 10px;
-
     margin-bottom: 19px;
-
     font-size: 10px;
-
     letter-spacing: 1.7px;
   }
 
   .mht-about__eyebrow span {
     width: 30px;
-
     height: 2px;
   }
 
-
-  /* -----------------------------------------
-     HEADING
-  ----------------------------------------- */
+  /* Heading */
 
   .mht-about__title {
     font-size: 35px;
-
     line-height: 1.08;
-
     letter-spacing: -0.4px;
   }
 
-
-  /* -----------------------------------------
-     TEXT
-  ----------------------------------------- */
+  /* Description */
 
   .mht-about__text {
     margin-top: 22px;
-
     font-size: 15.5px;
-
     line-height: 1.6;
   }
 
@@ -805,35 +609,23 @@
     margin-top: 19px;
   }
 
-
-  /* -----------------------------------------
-     INFORMATION ROW
-  ----------------------------------------- */
+  /* Approval and button */
 
   .mht-about__info-row {
-    flex-direction: column;
-
     align-items: flex-start;
-
+    flex-direction: column;
     gap: 24px;
-
     margin-top: 29px;
   }
-
-
-  /* -----------------------------------------
-     PESO
-  ----------------------------------------- */
 
   .mht-about__approval {
     gap: 12px;
   }
 
-  .mht-about__approval-icon {
+  .mht-about__approval-logo {
+    flex-basis: 50px;
     width: 50px;
     height: 50px;
-
-    min-width: 50px;
   }
 
   .mht-about__approval-content strong {
@@ -844,39 +636,27 @@
     font-size: 12px;
   }
 
-
-  /* -----------------------------------------
-     BUTTON
-  ----------------------------------------- */
-
   .mht-about__button {
     min-width: 200px;
-
-    height: 52px;
-
+    min-height: 52px;
     padding: 0 22px;
-
     font-size: 14px;
   }
 }
 
-
 /* =========================================================
-   SMALL MOBILE
-========================================================= */
+   SMALL MOBILE — 480px AND BELOW
+   ========================================================= */
 
 @media (max-width: 480px) {
-
   .mht-about {
     padding: 65px 0 70px;
   }
 
   .mht-about__container {
-    padding: 0 17px;
-
     gap: 52px;
+    padding: 0 17px;
   }
-
 
   /* Image */
 
@@ -886,20 +666,15 @@
 
   .mht-about__image-wrap {
     height: 350px;
-
     border-radius: 0 7px 7px 0;
   }
 
-
-  /* Experience */
+  /* Experience card */
 
   .mht-about__experience {
     right: 10px;
-
     width: 175px;
-
     min-height: 118px;
-
     padding: 17px 19px;
   }
 
@@ -909,20 +684,15 @@
 
   .mht-about__experience span {
     margin-top: 6px;
-
     font-size: 11px;
   }
-
 
   /* Eyebrow */
 
   .mht-about__eyebrow {
     gap: 8px;
-
     margin-bottom: 16px;
-
     font-size: 8.5px;
-
     letter-spacing: 1.35px;
   }
 
@@ -930,23 +700,18 @@
     width: 25px;
   }
 
-
   /* Heading */
 
   .mht-about__title {
     font-size: 31px;
-
     line-height: 1.08;
   }
 
-
-  /* Text */
+  /* Description */
 
   .mht-about__text {
     margin-top: 20px;
-
     font-size: 14px;
-
     line-height: 1.58;
   }
 
@@ -954,12 +719,10 @@
     margin-top: 18px;
   }
 
-
-  /* Information */
+  /* Approval */
 
   .mht-about__info-row {
     gap: 21px;
-
     margin-top: 26px;
   }
 
@@ -967,16 +730,11 @@
     gap: 10px;
   }
 
-  .mht-about__approval-icon {
+  .mht-about__approval-logo {
+    flex-basis: 46px;
     width: 46px;
     height: 46px;
-
-    min-width: 46px;
-  }
-
-  .mht-about__approval-icon svg {
-    width: 24px;
-    height: 24px;
+    padding: 3px;
   }
 
   .mht-about__approval-content strong {
@@ -987,35 +745,28 @@
     font-size: 11px;
   }
 
-
   /* Button */
 
   .mht-about__button {
     min-width: 185px;
-
-    height: 49px;
-
+    min-height: 49px;
     font-size: 13px;
   }
 }
 
-
 /* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
+   VERY SMALL MOBILE — 360px AND BELOW
+   ========================================================= */
 
 @media (max-width: 360px) {
-
   .mht-about {
     padding: 55px 0 65px;
   }
 
   .mht-about__container {
-    padding: 0 15px;
-
     gap: 45px;
+    padding: 0 15px;
   }
-
 
   /* Image */
 
@@ -1023,16 +774,12 @@
     height: 310px;
   }
 
-
   /* Experience */
 
   .mht-about__experience {
     right: 8px;
-
     width: 160px;
-
     min-height: 105px;
-
     padding: 15px 17px;
   }
 
@@ -1044,14 +791,11 @@
     font-size: 10px;
   }
 
-
   /* Eyebrow */
 
   .mht-about__eyebrow {
     margin-bottom: 14px;
-
     font-size: 8px;
-
     letter-spacing: 1.15px;
   }
 
@@ -1059,21 +803,17 @@
     width: 23px;
   }
 
-
   /* Heading */
 
   .mht-about__title {
     font-size: 28px;
   }
 
-
-  /* Text */
+  /* Description */
 
   .mht-about__text {
     margin-top: 18px;
-
     font-size: 13.5px;
-
     line-height: 1.55;
   }
 
@@ -1081,20 +821,17 @@
     margin-top: 17px;
   }
 
-
-  /* Information */
+  /* Approval */
 
   .mht-about__info-row {
     margin-top: 23px;
-
     gap: 19px;
   }
 
-  .mht-about__approval-icon {
+  .mht-about__approval-logo {
+    flex-basis: 43px;
     width: 43px;
     height: 43px;
-
-    min-width: 43px;
   }
 
   .mht-about__approval-content strong {
@@ -1105,25 +842,20 @@
     font-size: 10.5px;
   }
 
-
   /* Button */
 
   .mht-about__button {
     min-width: 175px;
-
-    height: 47px;
-
+    min-height: 47px;
     font-size: 12.5px;
   }
 }
 
-
 /* =========================================================
    ACCESSIBILITY
-========================================================= */
+   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   .mht-about__image,
   .mht-about__button,
   .mht-about__button svg {

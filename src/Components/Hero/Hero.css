@@ -1,185 +1,140 @@
+
 /* =========================================================
-   MANGALORE HYDRO TECH
-   FULL WIDTH HERO SLIDER
-========================================================= */
+   MANGALORE HYDRO TECH — HERO SECTION
+   Cambria Typography | Responsive Swiper Slider
+   ========================================================= */
 
 .mht-hero {
   position: relative;
-
   width: 100%;
   height: calc(100vh - 84px);
   min-height: 620px;
-
   overflow: hidden;
-
   background: #34495e;
-
   font-family: Cambria, Georgia, serif;
 }
 
-
-/* =========================================================
-   SWIPER
-========================================================= */
-
-.mht-hero__swiper {
-  width: 100%;
-  height: 100%;
+.mht-hero,
+.mht-hero * {
+  box-sizing: border-box;
 }
 
-.mht-hero .swiper-wrapper {
+/* =========================================================
+   SWIPER STRUCTURE
+   ========================================================= */
+
+.mht-hero__swiper,
+.mht-hero .swiper-wrapper,
+.mht-hero .swiper-slide {
+  width: 100%;
   height: 100%;
 }
 
 .mht-hero .swiper-slide {
-  width: 100%;
-  height: 100%;
-
   overflow: hidden;
 }
-
-
-/* =========================================================
-   SLIDE
-========================================================= */
 
 .mht-hero__slide {
   position: relative;
-
   width: 100%;
   height: 100%;
-
   overflow: hidden;
 }
 
-
 /* =========================================================
-   HERO IMAGE
-========================================================= */
+   BACKGROUND IMAGE
+   ========================================================= */
 
 .mht-hero__image {
   position: absolute;
-
-  top: -2%;
-  left: -2%;
-
+  inset: -2%;
+  z-index: 0;
   width: 104%;
   height: 104%;
-
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center center;
-
-  z-index: 0;
-
+  background-size: cover;
   transform: scale(1.03);
+  will-change: transform;
 }
 
-
 /* =========================================================
-   DARK OVERLAY
-========================================================= */
+   IMAGE OVERLAY
+   ========================================================= */
 
 .mht-hero__overlay {
   position: absolute;
   inset: 0;
-
   z-index: 1;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.96) 0%,
-      rgba(0, 0, 0, 0.90) 25%,
-      rgba(0, 0, 0, 0.72) 45%,
-      rgba(0, 0, 0, 0.40) 70%,
-      rgba(0, 0, 0, 0.16) 100%
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.96) 0%,
+    rgba(0, 0, 0, 0.90) 25%,
+    rgba(0, 0, 0, 0.72) 45%,
+    rgba(0, 0, 0, 0.40) 70%,
+    rgba(0, 0, 0, 0.16) 100%
+  );
 }
 
-
 /* =========================================================
-   CONTENT
-========================================================= */
+   HERO CONTENT
+   ========================================================= */
 
 .mht-hero__content {
   position: relative;
-
   z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 
   width: 100%;
   max-width: 1700px;
-
   height: 100%;
-
   margin: 0 auto;
-
-  padding-left: 7%;
-  padding-right: 30%;
-
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: flex-start;
+  padding: 40px 30% 40px 7%;
 }
 
-
 /* =========================================================
-   EYEBROW
-========================================================= */
+   EYEBROW TEXT
+   ========================================================= */
 
 .mht-hero__eyebrow {
   display: flex;
   align-items: center;
-
   gap: 15px;
-
-  margin-bottom: 24px;
+  margin: 0 0 24px;
 
   color: #f4d35e;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 16px;
   font-weight: 700;
-
   letter-spacing: 3px;
   line-height: 1.2;
 }
 
 .mht-hero__eyebrow span {
   display: block;
-
+  flex-shrink: 0;
   width: 50px;
   height: 2px;
-
-  flex-shrink: 0;
-
   background: #00a651;
 }
 
-
 /* =========================================================
    MAIN HEADING
-========================================================= */
+   ========================================================= */
 
 .mht-hero__title {
   max-width: 850px;
-
   margin: 0;
   padding: 0;
 
   color: #ffffff;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: clamp(48px, 4.5vw, 72px);
-
   font-weight: 700;
-
   line-height: 1.02;
-
   letter-spacing: -1.2px;
 }
 
@@ -187,99 +142,182 @@
   color: #f4d35e;
 }
 
-
 /* =========================================================
    DESCRIPTION
-========================================================= */
+   ========================================================= */
 
 .mht-hero__description {
   max-width: 670px;
-
   margin: 22px 0 0;
   padding: 0;
 
   color: rgba(255, 255, 255, 0.88);
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 18px;
-
   font-weight: 400;
-
   line-height: 1.55;
 }
 
+/* =========================================================
+   HERO ACTIONS
+   PESO BADGE FIRST
+   BOOK A SERVICE BUTTON BELOW
+   ========================================================= */
+
+.mht-hero__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 18px;
+
+  width: 100%;
+  margin-top: 28px;
+}
 
 /* =========================================================
-   BUTTON WRAPPER
-========================================================= */
+   PESO APPROVAL BADGE
+   ========================================================= */
+
+.mht-hero__peso {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  flex-shrink: 0;
+  max-width: 100%;
+  min-height: 82px;
+  margin: 0;
+  padding: 11px 18px;
+
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(244, 211, 94, 0.85);
+  border-left: 4px solid #00a651;
+  border-radius: 6px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.20),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+
+  color: #34495e;
+  font-family: Cambria, Georgia, serif;
+}
+
+/* PESO LOGO */
+
+.mht-hero__peso-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 58px;
+
+  width: 58px;
+  height: 58px;
+  overflow: hidden;
+}
+
+.mht-hero__peso-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* PESO TEXT */
+
+.mht-hero__peso-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+
+  font-family: Cambria, Georgia, serif;
+}
+
+.mht-hero__peso-content strong {
+  display: block;
+  margin: 0;
+
+  color: #34495e;
+  font-family: Cambria, Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  line-height: 1.2;
+}
+
+.mht-hero__peso-content span {
+  display: block;
+  max-width: 260px;
+  margin: 0;
+
+  color: #60718c;
+  font-family: Cambria, Georgia, serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   BOOK A SERVICE BUTTON
+   ========================================================= */
 
 .mht-hero__button-wrap {
-  margin-top: 28px;
-
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
   padding: 0;
 }
 
-
-/* =========================================================
-   BUTTON
-========================================================= */
+.mht-hero__actions .mht-hero__button-wrap {
+  margin-top: 0;
+}
 
 .mht-hero__button {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   gap: 16px;
 
   min-width: 215px;
-  height: 54px;
-
+  min-height: 54px;
   padding: 0 24px;
 
   background: #00a651;
-
-  color: #ffffff;
-
-  text-decoration: none;
-
+  border: 1px solid #00a651;
   border-radius: 4px;
 
+  color: #ffffff;
   font-family: Cambria, Georgia, serif;
-
   font-size: 15px;
-
   font-weight: 700;
-
   letter-spacing: 0.4px;
+  text-decoration: none;
 
   transition:
     background 0.3s ease,
+    border-color 0.3s ease,
     transform 0.3s ease;
 }
 
 .mht-hero__button:hover {
   background: #008d45;
-
+  border-color: #008d45;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
-
-/* =========================================================
-   BUTTON ARROW
-========================================================= */
-
 .mht-hero__button-arrow {
+  flex-shrink: 0;
   width: 22px;
   height: 22px;
 
   fill: none;
-
   stroke: currentColor;
-
   stroke-width: 2;
-
   stroke-linecap: round;
   stroke-linejoin: round;
 
@@ -290,176 +328,39 @@
   transform: translateX(5px);
 }
 
-
 /* =========================================================
-   PREMIUM PESO APPROVED BADGE
-========================================================= */
-
-.mht-hero__peso {
-  display: inline-flex;
-  align-items: center;
-
-  gap: 14px;
-
-  margin-top: 20px;
-
-  padding: 12px 20px;
-
-  background: rgba(255, 255, 255, 0.96);
-
-  border: 1px solid rgba(244, 211, 94, 0.75);
-
-  border-left: 4px solid #00a651;
-
-  border-radius: 6px;
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.20),
-    0 2px 6px rgba(0, 0, 0, 0.08);
-
-  color: #34495e;
-
-  font-family: Cambria, Georgia, serif;
-
-  position: relative;
-}
-
-
-/* =========================================================
-   PESO APPROVAL ICON
-========================================================= */
-
-.mht-hero__peso-icon {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 34px;
-  height: 34px;
-
-  flex-shrink: 0;
-
-  border: 2px solid #00a651;
-
-  border-radius: 50%;
-
-  background: #f7fff9;
-
-  color: #00a651;
-
-  font-family: Cambria, Georgia, serif;
-
-  font-size: 18px;
-
-  font-weight: 700;
-
-  line-height: 1;
-}
-
-
-/* =========================================================
-   PESO CONTENT
-========================================================= */
-
-.mht-hero__peso-content {
-  display: flex;
-  flex-direction: column;
-
-  gap: 3px;
-
-  font-family: Cambria, Georgia, serif;
-}
-
-
-/* =========================================================
-   PESO TITLE
-========================================================= */
-
-.mht-hero__peso-content strong {
-  display: block;
-
-  color: #34495e;
-
-  font-family: Cambria, Georgia, serif;
-
-  font-size: 15px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.2px;
-
-  line-height: 1.2;
-}
-
-
-/* =========================================================
-   PESO ORGANISATION
-========================================================= */
-
-.mht-hero__peso-content span {
-  display: block;
-
-  color: #60717c;
-
-  font-family: Cambria, Georgia, serif;
-
-  font-size: 11px;
-
-  font-weight: 400;
-
-  letter-spacing: 0.15px;
-
-  line-height: 1.35;
-}
-
-
-/* =========================================================
-   VERTICAL NAVIGATION
-========================================================= */
+   DESKTOP NAVIGATION
+   ========================================================= */
 
 .mht-hero__navigation {
   position: absolute;
-
   z-index: 20;
-
+  top: 50%;
   right: 35px;
 
-  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
 
   transform: translateY(-50%);
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  gap: 14px;
 }
 
 .mht-hero__nav-button {
-  width: 48px;
-  height: 48px;
-
-  padding: 0;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
 
+  width: 48px;
+  height: 48px;
+  padding: 0;
+
   border: 1px solid rgba(255, 255, 255, 0.35);
-
   border-radius: 50%;
-
   background: rgba(0, 0, 0, 0.20);
-
   color: #ffffff;
 
   cursor: pointer;
-
   backdrop-filter: blur(8px);
 
   transition:
@@ -473,63 +374,47 @@
   height: 20px;
 
   fill: none;
-
   stroke: currentColor;
-
   stroke-width: 1.8;
-
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .mht-hero__nav-button:hover {
   background: #00a651;
-
   border-color: #00a651;
-
   transform: scale(1.08);
 }
 
-
 /* =========================================================
-   PAGINATION
-========================================================= */
+   SLIDE PAGINATION
+   ========================================================= */
 
 .mht-hero__pagination {
   position: absolute !important;
-
   z-index: 20;
-
   top: 50%;
-
   right: 47px;
 
-  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
 
   width: 30px !important;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  gap: 7px;
+  transform: translateY(-50%);
 }
 
 .mht-hero__pagination .swiper-pagination-bullet {
-  width: 28px;
-  height: 28px;
-
-  margin: 0 !important;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  background: transparent;
+  width: 28px;
+  height: 28px;
+  margin: 0 !important;
 
+  background: transparent;
   opacity: 0.7;
 }
 
@@ -539,29 +424,19 @@
 
 .mht-hero__pagination-bullet svg {
   display: block;
-
   width: 28px;
   height: 28px;
-
   transform: rotate(-90deg);
 }
 
-
-/* =========================================================
-   PAGINATION CIRCLES
-========================================================= */
-
 .mht-hero__pagination-circle {
   stroke: rgba(255, 255, 255, 0.35);
-
   stroke-dasharray: 69;
-
   stroke-dashoffset: 69;
 }
 
 .mht-hero__pagination-inner {
   fill: transparent;
-
   stroke: rgba(255, 255, 255, 0.65);
 }
 
@@ -569,11 +444,8 @@
 .swiper-pagination-bullet-active
 .mht-hero__pagination-circle {
   stroke: #f4d35e;
-
   stroke-dasharray: 69;
-
   stroke-dashoffset: 0;
-
   animation: mhtHeroProgress 5s linear forwards;
 }
 
@@ -581,17 +453,10 @@
 .swiper-pagination-bullet-active
 .mht-hero__pagination-inner {
   fill: #f4d35e;
-
   stroke: #f4d35e;
 }
 
-
-/* =========================================================
-   PAGINATION PROGRESS
-========================================================= */
-
 @keyframes mhtHeroProgress {
-
   0% {
     stroke-dashoffset: 69;
     opacity: 1;
@@ -608,10 +473,9 @@
   }
 }
 
-
 /* =========================================================
-   IMAGE ZOOM
-========================================================= */
+   ACTIVE SLIDE IMAGE ZOOM
+   ========================================================= */
 
 .mht-hero
 .swiper-slide-active
@@ -620,7 +484,6 @@
 }
 
 @keyframes mhtHeroImageZoom {
-
   from {
     transform: scale(1.05);
   }
@@ -630,35 +493,30 @@
   }
 }
 
-
 /* =========================================================
-   BOTTOM GREEN ACCENT
-========================================================= */
+   BOTTOM ACCENT
+   ========================================================= */
 
 .mht-hero::after {
   content: "";
-
   position: absolute;
-
-  left: 0;
+  z-index: 30;
   right: 0;
   bottom: 0;
-
-  z-index: 30;
+  left: 0;
 
   width: 100%;
   height: 3px;
 
   background: #00a651;
+  pointer-events: none;
 }
 
-
 /* =========================================================
-   LARGE DESKTOP
-========================================================= */
+   LARGE DESKTOP — 1600px AND ABOVE
+   ========================================================= */
 
 @media (min-width: 1600px) {
-
   .mht-hero__content {
     padding-left: 8%;
   }
@@ -669,7 +527,6 @@
 
   .mht-hero__description {
     max-width: 730px;
-
     font-size: 19px;
   }
 
@@ -682,47 +539,58 @@
   }
 }
 
-
 /* =========================================================
-   LAPTOP
-========================================================= */
+   LAPTOP — 1200px AND BELOW
+   ========================================================= */
 
 @media (max-width: 1200px) {
-
   .mht-hero {
     height: calc(100vh - 84px);
-
     min-height: 580px;
   }
 
   .mht-hero__content {
     padding-left: 5%;
-
     padding-right: 25%;
   }
 
   .mht-hero__title {
     font-size: 55px;
-
     line-height: 1.03;
   }
 
   .mht-hero__description {
     max-width: 620px;
-
     margin-top: 20px;
-
     font-size: 17px;
-
     line-height: 1.55;
   }
 
-  .mht-hero__button-wrap {
+  .mht-hero__actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
     margin-top: 26px;
   }
 
   .mht-hero__peso {
-    margin-top: 18px;
+    gap: 11px;
+    padding: 10px 14px;
+  }
+
+  .mht-hero__peso-logo {
+    flex-basis: 52px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .mht-hero__peso-content strong {
+    font-size: 14px;
+  }
+
+  .mht-hero__peso-content span {
+    max-width: 230px;
+    font-size: 10px;
   }
 
   .mht-hero__navigation {
@@ -734,30 +602,24 @@
   }
 }
 
-
 /* =========================================================
-   TABLET
-========================================================= */
+   TABLET — 992px AND BELOW
+   ========================================================= */
 
 @media (max-width: 992px) {
-
   .mht-hero {
     height: calc(100vh - 78px);
-
     min-height: 600px;
   }
 
   .mht-hero__content {
     padding-left: 40px;
-
-    padding-right: 180px;
+    padding-right: 150px;
   }
 
   .mht-hero__eyebrow {
     margin-bottom: 22px;
-
     font-size: 14px;
-
     letter-spacing: 2.5px;
   }
 
@@ -767,32 +629,30 @@
 
   .mht-hero__title {
     font-size: 48px;
-
     line-height: 1.03;
   }
 
   .mht-hero__description {
     max-width: 610px;
-
     margin-top: 21px;
-
     font-size: 17px;
-
     line-height: 1.55;
   }
 
-  .mht-hero__button-wrap {
-    margin-top: 28px;
+  .mht-hero__actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .mht-hero__peso {
+    min-height: 72px;
   }
 
   .mht-hero__button {
     min-width: 210px;
-
-    height: 53px;
-  }
-
-  .mht-hero__peso {
-    margin-top: 18px;
+    min-height: 53px;
   }
 
   .mht-hero__navigation {
@@ -804,262 +664,163 @@
   }
 
   .mht-hero__overlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.83) 45%,
-        rgba(0, 0, 0, 0.48) 100%
-      );
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.83) 45%,
+      rgba(0, 0, 0, 0.48) 100%
+    );
   }
 }
 
-
 /* =========================================================
-   MOBILE
-========================================================= */
+   MOBILE — 768px AND BELOW
+   ========================================================= */
 
 @media (max-width: 768px) {
-
   .mht-hero {
     height: calc(100vh - 76px);
-
     min-height: 650px;
   }
 
-
-  /* =====================================
-     CONTENT POSITION
-  ===================================== */
-
   .mht-hero__content {
-    height: 100%;
-
-    padding: 45px 22px 100px;
-
     justify-content: flex-start;
-
     align-items: flex-start;
+    height: 100%;
+    padding: 45px 22px 100px;
   }
-
-
-  /* =====================================
-     EYEBROW
-  ===================================== */
 
   .mht-hero__eyebrow {
     gap: 10px;
-
     margin-bottom: 24px;
-
     font-size: 10px;
-
     letter-spacing: 1.8px;
-
     line-height: 1.2;
   }
 
   .mht-hero__eyebrow span {
     width: 32px;
-
     height: 2px;
   }
 
-
-  /* =====================================
-     HEADING
-  ===================================== */
-
   .mht-hero__title {
     max-width: 100%;
-
     margin: 0;
-
-    padding: 0;
-
     font-size: 39px;
-
     line-height: 1.08;
-
     letter-spacing: -0.5px;
   }
 
-
-  /* =====================================
-     DESCRIPTION
-  ===================================== */
-
   .mht-hero__description {
     max-width: 94%;
-
-    margin: 24px 0 0;
-
+    margin-top: 24px;
     font-size: 15.5px;
-
     line-height: 1.6;
   }
 
+  /* Keep PESO first and button underneath */
 
-  /* =====================================
-     BUTTON
-  ===================================== */
+  .mht-hero__actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 17px;
+    width: 100%;
+    margin-top: 25px;
+  }
 
-  .mht-hero__button-wrap {
-    margin-top: 28px;
+  .mht-hero__peso {
+    gap: 11px;
+    min-height: 70px;
+    max-width: 100%;
+    padding: 9px 13px;
+    border-left-width: 3px;
+    border-radius: 5px;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.18);
+  }
+
+  .mht-hero__peso-logo {
+    flex-basis: 46px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .mht-hero__peso-content {
+    gap: 3px;
+  }
+
+  .mht-hero__peso-content strong {
+    font-size: 13px;
+    letter-spacing: 0.8px;
+  }
+
+  .mht-hero__peso-content span {
+    max-width: 230px;
+    font-size: 10px;
+    line-height: 1.35;
   }
 
   .mht-hero__button {
     min-width: 220px;
-
-    height: 57px;
-
+    min-height: 57px;
     padding: 0 23px;
-
     gap: 16px;
-
     font-size: 14px;
   }
 
   .mht-hero__button-arrow {
     width: 22px;
-
     height: 22px;
   }
-
-
-  /* =====================================
-     PREMIUM PESO BADGE
-  ===================================== */
-
-  .mht-hero__peso {
-    gap: 11px;
-
-    margin-top: 17px;
-
-    padding: 10px 15px;
-
-    border-left-width: 3px;
-
-    border-radius: 5px;
-
-    box-shadow:
-      0 7px 20px rgba(0, 0, 0, 0.18);
-  }
-
-  .mht-hero__peso-icon {
-    width: 30px;
-
-    height: 30px;
-
-    font-size: 16px;
-  }
-
-  .mht-hero__peso-content {
-    gap: 2px;
-  }
-
-  .mht-hero__peso-content strong {
-    font-size: 13px;
-
-    letter-spacing: 0.9px;
-  }
-
-  .mht-hero__peso-content span {
-    font-size: 9.5px;
-
-    line-height: 1.3;
-  }
-
-
-  /* =====================================
-     IMAGE
-  ===================================== */
 
   .mht-hero__image {
     background-position: 68% center;
   }
 
-
-  /* =====================================
-     MOBILE OVERLAY
-  ===================================== */
-
   .mht-hero__overlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.94) 0%,
-        rgba(0, 0, 0, 0.84) 42%,
-        rgba(0, 0, 0, 0.55) 72%,
-        rgba(0, 0, 0, 0.30) 100%
-      );
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.94) 0%,
+      rgba(0, 0, 0, 0.84) 42%,
+      rgba(0, 0, 0, 0.55) 72%,
+      rgba(0, 0, 0, 0.30) 100%
+    );
   }
-
-
-  /* =====================================
-     HIDE DESKTOP NAVIGATION
-  ===================================== */
 
   .mht-hero__navigation {
     display: none;
   }
 
-
-  /* =====================================
-     MOBILE PAGINATION
-  ===================================== */
-
   .mht-hero__pagination {
     top: auto;
-
     right: 50%;
-
     bottom: 18px;
 
-    transform: translateX(50%);
-
     width: auto !important;
-
     flex-direction: row;
-
     gap: 5px;
+
+    transform: translateX(50%);
   }
 }
 
-
 /* =========================================================
-   SMALL MOBILE
-========================================================= */
+   SMALL MOBILE — 480px AND BELOW
+   ========================================================= */
 
 @media (max-width: 480px) {
-
   .mht-hero {
     height: calc(100vh - 76px);
-
     min-height: 630px;
   }
-
-
-  /* =====================================
-     CONTENT
-  ===================================== */
 
   .mht-hero__content {
     padding: 38px 18px 88px;
   }
 
-
-  /* =====================================
-     EYEBROW
-  ===================================== */
-
   .mht-hero__eyebrow {
     gap: 9px;
-
     margin-bottom: 22px;
-
     font-size: 9px;
-
     letter-spacing: 1.5px;
   }
 
@@ -1067,137 +828,82 @@
     width: 28px;
   }
 
-
-  /* =====================================
-     HEADING
-  ===================================== */
-
   .mht-hero__title {
     font-size: 34px;
-
     line-height: 1.08;
   }
 
-
-  /* =====================================
-     DESCRIPTION
-  ===================================== */
-
   .mht-hero__description {
     max-width: 96%;
-
     margin-top: 22px;
-
     font-size: 14.5px;
-
     line-height: 1.58;
   }
 
-
-  /* =====================================
-     BUTTON
-  ===================================== */
-
-  .mht-hero__button-wrap {
-    margin-top: 26px;
+  .mht-hero__actions {
+    gap: 15px;
+    margin-top: 23px;
   }
-
-  .mht-hero__button {
-    min-width: 205px;
-
-    height: 54px;
-
-    font-size: 13.5px;
-  }
-
-
-  /* =====================================
-     PREMIUM PESO BADGE
-  ===================================== */
 
   .mht-hero__peso {
     gap: 9px;
-
-    margin-top: 15px;
-
-    padding: 9px 12px;
+    min-height: 62px;
+    padding: 8px 10px;
   }
 
-  .mht-hero__peso-icon {
-    width: 28px;
-
-    height: 28px;
-
-    font-size: 15px;
+  .mht-hero__peso-logo {
+    flex-basis: 40px;
+    width: 40px;
+    height: 40px;
   }
 
   .mht-hero__peso-content {
-    gap: 1px;
+    gap: 2px;
   }
 
   .mht-hero__peso-content strong {
     font-size: 11.5px;
-
-    letter-spacing: 0.7px;
+    letter-spacing: 0.6px;
   }
 
   .mht-hero__peso-content span {
-    font-size: 8.5px;
-
+    max-width: 220px;
+    font-size: 9px;
     line-height: 1.3;
   }
 
-
-  /* =====================================
-     IMAGE
-  ===================================== */
+  .mht-hero__button {
+    min-width: 205px;
+    min-height: 54px;
+    font-size: 13.5px;
+  }
 
   .mht-hero__image {
     background-position: 70% center;
   }
 
-
-  /* =====================================
-     PAGINATION
-  ===================================== */
-
   .mht-hero__pagination {
     right: 50%;
-
     bottom: 16px;
   }
 }
 
-
 /* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
+   VERY SMALL MOBILE — 360px AND BELOW
+   ========================================================= */
 
 @media (max-width: 360px) {
-
   .mht-hero {
     min-height: 600px;
   }
-
-
-  /* =====================================
-     CONTENT
-  ===================================== */
 
   .mht-hero__content {
     padding: 32px 16px 82px;
   }
 
-
-  /* =====================================
-     EYEBROW
-  ===================================== */
-
   .mht-hero__eyebrow {
     margin-bottom: 20px;
-
     font-size: 8.5px;
-
     letter-spacing: 1.3px;
   }
 
@@ -1205,92 +911,57 @@
     width: 24px;
   }
 
-
-  /* =====================================
-     HEADING
-  ===================================== */
-
   .mht-hero__title {
     font-size: 30px;
-
     line-height: 1.08;
   }
 
-
-  /* =====================================
-     DESCRIPTION
-  ===================================== */
-
   .mht-hero__description {
     margin-top: 19px;
-
     font-size: 13.5px;
-
     line-height: 1.55;
   }
 
-
-  /* =====================================
-     BUTTON
-  ===================================== */
-
-  .mht-hero__button-wrap {
-    margin-top: 23px;
+  .mht-hero__actions {
+    gap: 13px;
+    margin-top: 21px;
   }
-
-  .mht-hero__button {
-    min-width: 190px;
-
-    height: 51px;
-
-    font-size: 13px;
-  }
-
-
-  /* =====================================
-     PREMIUM PESO BADGE
-  ===================================== */
 
   .mht-hero__peso {
     gap: 8px;
-
-    margin-top: 13px;
-
-    padding: 8px 10px;
+    min-height: 55px;
+    padding: 7px 9px;
   }
 
-  .mht-hero__peso-icon {
-    width: 25px;
-
-    height: 25px;
-
-    font-size: 13px;
-  }
-
-  .mht-hero__peso-content {
-    gap: 1px;
+  .mht-hero__peso-logo {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
   }
 
   .mht-hero__peso-content strong {
     font-size: 10px;
-
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
   }
 
   .mht-hero__peso-content span {
+    max-width: 195px;
     font-size: 7.8px;
-
     line-height: 1.25;
+  }
+
+  .mht-hero__button {
+    min-width: 190px;
+    min-height: 51px;
+    font-size: 13px;
   }
 }
 
-
 /* =========================================================
-   ACCESSIBILITY
-========================================================= */
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   .mht-hero__button,
   .mht-hero__button-arrow,
   .mht-hero__nav-button {

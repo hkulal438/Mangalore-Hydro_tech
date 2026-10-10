@@ -17,6 +17,7 @@ import "./Hero.css";
 
 import heroImage1 from "../../images/Hero.png";
 import heroImage2 from "../../images/hero1.png";
+import pesoLogo from "../../images/PESO-removebg-preview.png";
 
 const Hero = () => {
   const swiperRef = useRef(null);
@@ -28,24 +29,14 @@ const Hero = () => {
   }, []);
 
   const slides = [
-    {
-      image: heroImage1,
-    },
-    {
-      image: heroImage2,
-    },
+    { image: heroImage1 },
+    { image: heroImage2 },
   ];
 
   return (
     <section id="home" className="mht-hero">
-
-      {/* =====================================================
-          SWIPER
-      ====================================================== */}
-
       <Swiper
         className="mht-hero__swiper"
-
         modules={[
           Autoplay,
           EffectFade,
@@ -53,26 +44,21 @@ const Hero = () => {
           Pagination,
           Navigation,
         ]}
-
         effect="fade"
         speed={1200}
         parallax={true}
         loop={true}
-
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
         }}
-
         navigation={{
           nextEl: ".mht-hero__next",
           prevEl: ".mht-hero__prev",
         }}
-
         pagination={{
           el: ".mht-hero__pagination",
           clickable: true,
-
           renderBullet: (index, className) => {
             return `
               <span class="${className} mht-hero__pagination-bullet">
@@ -90,7 +76,6 @@ const Hero = () => {
                     fill="none"
                     stroke-width="2"
                   />
-
                   <circle
                     class="mht-hero__pagination-inner"
                     cx="15"
@@ -103,21 +88,13 @@ const Hero = () => {
             `;
           },
         }}
-
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
       >
-
-        {/* =====================================================
-            HERO SLIDES
-        ====================================================== */}
-
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-
             <div className="mht-hero__slide">
-
               {/* Background Image */}
               <div
                 className="mht-hero__image"
@@ -130,13 +107,8 @@ const Hero = () => {
               {/* Dark Overlay */}
               <div className="mht-hero__overlay" />
 
-              {/* =================================================
-                  CONTENT
-              ================================================= */}
-
+              {/* Hero Content */}
               <div className="mht-hero__content">
-
-                {/* Eyebrow */}
                 <div
                   className="mht-hero__eyebrow"
                   data-swiper-parallax-y="-80"
@@ -146,11 +118,7 @@ const Hero = () => {
                   MANGALORE HYDRO TECH
                 </div>
 
-
-                {/* =================================================
-                    MAIN HEADING
-                ================================================= */}
-
+                {/* Main Heading */}
                 <h1
                   className="mht-hero__title"
                   data-swiper-parallax-y="-150"
@@ -161,11 +129,7 @@ const Hero = () => {
                   <span>Safety Services</span>
                 </h1>
 
-
-                {/* =================================================
-                    DESCRIPTION
-                ================================================= */}
-
+                {/* Description */}
                 <p
                   className="mht-hero__description"
                   data-swiper-parallax-y="-200"
@@ -176,128 +140,83 @@ const Hero = () => {
                   a strong focus on safety, quality and reliability.
                 </p>
 
-
-                {/* =================================================
-                    BOOK A SERVICE
-                ================================================= */}
-
-                <div
-                  className="mht-hero__button-wrap"
-                  data-swiper-parallax-y="-250"
-                  data-swiper-parallax-duration="1500"
-                >
-                  <a
-                    href="#contact"
-                    className="mht-hero__button"
+                {/* PESO Approval + Book a Service */}
+                <div className="mht-hero__actions">
+                  <div
+                    className="mht-hero__peso"
+                    data-swiper-parallax-y="-230"
+                    data-swiper-parallax-duration="1400"
                   >
-                    <span>BOOK A SERVICE</span>
+                    <div className="mht-hero__peso-logo">
+                      <img
+                        src={pesoLogo}
+                        alt="PESO - Petroleum and Explosives Safety Organisation"
+                      />
+                    </div>
 
-                    <svg
-                      className="mht-hero__button-arrow"
-                      viewBox="0 0 32 32"
-                      aria-hidden="true"
-                    >
-                      <path d="M5 16h20" />
-                      <path d="M18 9l7 7-7 7" />
-                    </svg>
-                  </a>
-                </div>
-
-
-                {/* =================================================
-                    PESO APPROVAL BADGE
-                ================================================= */}
-
-                <div
-                  className="mht-hero__peso"
-                  data-swiper-parallax-y="-280"
-                  data-swiper-parallax-duration="1600"
-                >
-
-                  {/* PESO Icon */}
+                    <div className="mht-hero__peso-content">
+                      <strong>PESO APPROVED</strong>
+                      <span>
+                        Petroleum and Explosives Safety Organisation
+                      </span>
+                    </div>
+                  </div>
 
                   <div
-                    className="mht-hero__peso-icon"
-                    aria-hidden="true"
+                    className="mht-hero__button-wrap"
+                    data-swiper-parallax-y="-250"
+                    data-swiper-parallax-duration="1500"
                   >
-                    <span>✓</span>
+                    <a
+                      href="#contact"
+                      className="mht-hero__button"
+                    >
+                      <span>BOOK A SERVICE</span>
+
+                      <svg
+                        className="mht-hero__button-arrow"
+                        viewBox="0 0 32 32"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 16h20" />
+                        <path d="M18 9l7 7-7 7" />
+                      </svg>
+                    </a>
                   </div>
-
-
-                  {/* PESO Content */}
-
-                  <div className="mht-hero__peso-content">
-
-                    <strong>
-                      PESO APPROVED
-                    </strong>
-
-                    <span>
-                      Petroleum and Explosives Safety Organisation
-                    </span>
-
-                  </div>
-
                 </div>
-
               </div>
-
             </div>
-
           </SwiperSlide>
         ))}
-
       </Swiper>
 
-
-      {/* =========================================================
-          VERTICAL NAVIGATION
-      ========================================================== */}
-
+      {/* Vertical Navigation */}
       <div className="mht-hero__navigation">
-
-        {/* Previous */}
-
         <button
           type="button"
           className="mht-hero__nav-button mht-hero__prev"
           aria-label="Previous slide"
         >
-          <svg
-            viewBox="0 0 32 32"
-            aria-hidden="true"
-          >
+          <svg viewBox="0 0 32 32" aria-hidden="true">
             <path d="M16 25V7" />
             <path d="M9 14l7-7 7 7" />
           </svg>
         </button>
-
-
-        {/* Next */}
 
         <button
           type="button"
           className="mht-hero__nav-button mht-hero__next"
           aria-label="Next slide"
         >
-          <svg
-            viewBox="0 0 32 32"
-            aria-hidden="true"
-          >
+          <svg viewBox="0 0 32 32" aria-hidden="true">
             <path d="M16 7v18" />
-            <path d="M9 18l7 7-7-7" />
+            <path d="M9 18l7 7 7-7" />
           </svg>
         </button>
-
       </div>
 
-
-      {/* =========================================================
-          PAGINATION
-      ========================================================== */}
-
+      {/* Pagination */}
       <div className="mht-hero__pagination"></div>
-
     </section>
   );
 };
