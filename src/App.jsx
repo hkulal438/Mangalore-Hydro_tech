@@ -6,7 +6,6 @@ import {
   Routes,
   Route,
   useLocation,
-  useNavigate,
 } from "react-router-dom";
 
 import AOS from "aos";
@@ -49,119 +48,68 @@ function Home() {
 }
 
 /* =========================================================
-   HANDLE HOMEPAGE SECTION LINKS
+   SCROLL HANDLER
+   - Privacy page opens at the top
+   - Homepage hash links scroll to their sections
 ========================================================= */
 
-function ScrollToHash() {
-  const location = useLocation();
+function ScrollManager() {
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (location.pathname !== "/") {
-      return;
-    }
-
-    if (!location.hash) {
+    if (pathname !== "/") {
+      // Always open separate pages at the top.
       window.scrollTo({
         top: 0,
-        behavior: "auto",
+        left: 0,
+        behavior: "instant",
       });
       return;
     }
 
-    const sectionId = decodeURIComponent(
-      location.hash.substring(1)
-    );
+    if (!hash) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+      });
+      return;
+    }
 
-    // Wait for the homepage sections to render.
+    const sectionId = decodeURIComponent(hash.slice(1));
+
+    // Allow the homepage sections to render before scrolling.
     const frameId = requestAnimationFrame(() => {
       const section = document.getElementById(sectionId);
 
       if (section) {
         section.scrollIntoView({
-          behavior: "smooth",
+          behavior: "auto",
           block: "start",
         });
       }
     });
 
-    return () => {
-      cancelAnimationFrame(frameId);
-    };
-  }, [location.pathname, location.hash]);
+    return () => cancelAnimationFrame(frameId);
+  }, [pathname, hash]);
 
   return null;
 }
 
 /* =========================================================
-   ROUTE-AWARE APP CONTENT
+   APP CONTENT
 ========================================================= */
 
 function AppContent() {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const { pathname } = useLocation();
 
-  // Refresh AOS when navigating between pages.
   useEffect(() => {
     AOS.refreshHard();
-  }, [location.pathname]);
-
-  // Make /#section links navigate correctly from the privacy page.
-  useEffect(() => {
-    const handleDocumentClick = (event) => {
-      // Ignore modified clicks and non-left mouse clicks.
-      if (
-        event.defaultPrevented ||
-        event.button !== 0 ||
-        event.metaKey ||
-        event.ctrlKey ||
-        event.shiftKey ||
-        event.altKey
-      ) {
-        return;
-      }
-
-      const target = event.target;
-
-      if (!(target instanceof Element)) {
-        return;
-      }
-
-      const link = target.closest("a[href]");
-
-      if (!link || link.target === "_blank") {
-        return;
-      }
-
-      const href = link.getAttribute("href");
-
-      if (!href || !href.startsWith("/#")) {
-        return;
-      }
-
-      // Homepage links already work normally on the homepage.
-      if (location.pathname === "/") {
-        return;
-      }
-
-      event.preventDefault();
-
-      // Return to the homepage and scroll to the requested section.
-      navigate(href.substring(1));
-    };
-
-    document.addEventListener("click", handleDocumentClick);
-
-    return () => {
-      document.removeEventListener(
-        "click",
-        handleDocumentClick
-      );
-    };
-  }, [location.pathname, navigate]);
+  }, [pathname]);
 
   return (
     <div className="mht-app">
-      <ScrollToHash />
+      <ScrollManager />
 
       {/* Shared Header */}
       <Header />
@@ -169,17 +117,8 @@ function AppContent() {
       {/* Page Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
-
-        <Route
-          path="/privacy-policy"
-          element={<Privacy />}
-        />
-
-        {/* Fallback for unknown URLs */}
-        <Route
-          path="*"
-          element={<Home />}
-        />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="*" element={<Home />} />
       </Routes>
 
       {/* Shared Footer */}
