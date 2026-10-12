@@ -1,188 +1,181 @@
+
 /* =========================================================
-   MANGALORE HYDRO TESTING
-   PREMIUM LIGHT FOOTER
-========================================================= */
+   MANGALORE HYDRO TECH — FOOTER
+   ========================================================= */
 
 .mht-footer {
   width: 100%;
-
   padding: 60px 32px 0;
-
-  background: #f4f6f5;
-
-  color: #34495e;
-
-  font-family: Cambria, Georgia, serif;
-
   overflow: hidden;
+  background: #f4f6f5;
+  color: #34495e;
+  font-family: Cambria, Georgia, serif;
 }
 
+.mht-footer,
 .mht-footer *,
 .mht-footer *::before,
 .mht-footer *::after {
   box-sizing: border-box;
 }
 
+.mht-footer a {
+  overflow-wrap: anywhere;
+}
 
 /* =========================================================
    MAIN FOOTER CONTAINER
-========================================================= */
+   ========================================================= */
 
 .mht-footer__container {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr 1.15fr 1.25fr;
+  gap: 45px;
   width: 100%;
   max-width: 1420px;
-
   margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns:
-    1.25fr
-    0.75fr
-    1.15fr
-    1.25fr;
-
-  gap: 55px;
-
   padding-bottom: 50px;
 }
 
-
 /* =========================================================
    BRAND
-========================================================= */
+   ========================================================= */
 
 .mht-footer__brand {
   display: flex;
-
   flex-direction: column;
-
   align-items: flex-start;
+  min-width: 0;
 }
-
 
 /* =========================================================
    LOGO
-========================================================= */
+   ========================================================= */
 
 .mht-footer__logo-wrap {
   display: flex;
-
   align-items: center;
   justify-content: flex-start;
-
   width: 205px;
   height: 105px;
-
-  margin-bottom: 18px;
-
+  margin-bottom: 15px;
   padding: 0;
-
   background: transparent;
+}
 
-  border: none;
-
-  box-shadow: none;
-
-  border-radius: 0;
+.mht-footer__logo-wrap a {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .mht-footer__brand img {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: contain;
-
   object-position: left center;
-
   background: transparent;
-
   padding: 0;
-
   border: 0;
-
-  border-radius: 0;
 }
 
+/* =========================================================
+   COMPANY NAME
+   ========================================================= */
+
+.mht-footer__brand-title {
+  margin: 0 0 12px;
+  color: #34495e;
+  font-family: Cambria, Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.3px;
+}
 
 /* =========================================================
    BRAND DESCRIPTION
-========================================================= */
+   ========================================================= */
 
-.mht-footer__brand p {
+.mht-footer__brand > p {
   max-width: 380px;
-
   margin: 0;
-
   color: #34495e;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 15px;
-
   font-weight: 400;
-
   line-height: 1.7;
 }
 
+/* =========================================================
+   GST IDENTIFICATION NUMBER
+   ========================================================= */
+
+.mht-footer__gst {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 16px;
+  color: #34495e;
+  font-family: Cambria, Georgia, serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mht-footer__gst span {
+  color: #60717c;
+  font-weight: 400;
+}
+
+.mht-footer__gst strong {
+  color: #34495e;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
 
 /* =========================================================
    SECTION HEADINGS
-========================================================= */
+   ========================================================= */
 
 .mht-footer h3 {
   margin: 5px 0 25px;
-
   color: #00a651;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 15px;
-
   font-weight: 700;
-
   letter-spacing: 2.2px;
-
   line-height: 1.2;
 }
 
-
 /* =========================================================
-   COMPANY / SERVICES
-========================================================= */
+   COMPANY AND SERVICES COLUMNS
+   ========================================================= */
 
 .mht-footer__column {
   display: flex;
-
   flex-direction: column;
-
+  align-items: flex-start;
+  min-width: 0;
   gap: 13px;
 }
 
-
 /* =========================================================
    FOOTER LINKS
-========================================================= */
+   ========================================================= */
 
 .mht-footer__column a {
   display: inline-block;
-
   width: fit-content;
-
+  max-width: 100%;
   color: #34495e;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 15px;
-
   font-weight: 400;
-
   line-height: 1.45;
-
   text-decoration: none;
-
   transition:
     color 0.2s ease,
     transform 0.2s ease;
@@ -190,184 +183,144 @@
 
 .mht-footer__column a:hover {
   color: #00a651;
-
   transform: translateX(3px);
 }
 
+.mht-footer__privacy-link {
+  margin-top: 2px;
+}
 
 /* =========================================================
-   CONTACT
-========================================================= */
+   CONTACT COLUMN
+   ========================================================= */
 
 .mht-footer__contact {
   display: flex;
-
   flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
 }
-
 
 /* =========================================================
    CONTACT ITEMS
-========================================================= */
+   ========================================================= */
 
 .mht-footer__contact-item {
   display: flex;
-
   align-items: flex-start;
-
   gap: 13px;
-
+  width: 100%;
   margin-bottom: 17px;
-
   color: #34495e;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 15px;
-
   font-weight: 400;
-
   line-height: 1.55;
-
   text-decoration: none;
-
-  transition:
-    color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
+.mht-footer__contact-item span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 
 /* =========================================================
    CONTACT ICONS
-========================================================= */
+   ========================================================= */
 
 .mht-footer__contact-item svg {
   width: 21px;
   height: 21px;
-
   flex: 0 0 21px;
-
   margin-top: 2px;
-
   color: #00a651;
 }
 
-
 /* =========================================================
    CONTACT HOVER
-========================================================= */
+   ========================================================= */
 
 .mht-footer__contact-item:hover {
   color: #00a651;
 }
 
-
 /* =========================================================
    BOOK A SERVICE CTA
-========================================================= */
+   ========================================================= */
 
 .mht-footer__cta {
   display: inline-flex;
-
   align-items: center;
   justify-content: space-between;
-
   gap: 20px;
-
   width: fit-content;
-
   min-width: 175px;
-
   margin-top: 7px;
-
   padding: 12px 17px;
-
   background: #00a651;
-
+  border: 1px solid #00a651;
   border-radius: 4px;
-
   color: #ffffff;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 14px;
-
   font-weight: 700;
-
   text-decoration: none;
-
   transition:
     background 0.25s ease,
+    border-color 0.25s ease,
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
 .mht-footer__cta:hover {
   background: #008d45;
-
+  border-color: #008d45;
   color: #ffffff;
-
   transform: translateY(-2px);
-
-  box-shadow:
-    0 7px 18px rgba(0, 166, 81, 0.18);
+  box-shadow: 0 7px 18px rgba(0, 166, 81, 0.18);
 }
 
 .mht-footer__cta span:last-child {
   font-size: 20px;
-
   font-weight: 400;
-
   line-height: 1;
 }
 
-
 /* =========================================================
-   BOTTOM / COPYRIGHT
-========================================================= */
+   BOTTOM COPYRIGHT
+   ========================================================= */
 
 .mht-footer__bottom {
   width: 100%;
-
   max-width: 1420px;
-
   margin: 0 auto;
-
   padding: 24px 0 27px;
-
   border-top: 1px solid rgba(52, 73, 94, 0.18);
-
   text-align: center;
 }
 
 .mht-footer__bottom p {
   margin: 0;
-
   color: #60717c;
-
   font-family: Cambria, Georgia, serif;
-
   font-size: 14px;
-
   font-weight: 400;
-
   line-height: 1.5;
 }
 
-
 /* =========================================================
    LARGE DESKTOP
-========================================================= */
+   ========================================================= */
 
 @media (min-width: 1600px) {
-
   .mht-footer {
     padding-top: 70px;
   }
 
   .mht-footer__container {
     max-width: 1500px;
-
-    gap: 65px;
+    gap: 60px;
   }
 
   .mht-footer__logo-wrap {
@@ -375,31 +328,24 @@
     height: 110px;
   }
 
-  .mht-footer__brand p {
+  .mht-footer__brand > p {
     max-width: 400px;
-
     font-size: 16px;
   }
 }
 
-
 /* =========================================================
-   TABLET
-========================================================= */
+   TABLET / SMALL DESKTOP
+   ========================================================= */
 
 @media (max-width: 1100px) {
-
   .mht-footer {
     padding: 50px 25px 0;
   }
 
   .mht-footer__container {
-    grid-template-columns:
-      1.2fr
-      0.8fr
-      1fr;
-
-    gap: 40px;
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    gap: 38px 30px;
   }
 
   .mht-footer__brand {
@@ -410,22 +356,23 @@
     width: 205px;
     height: 100px;
   }
+
+  .mht-footer__brand > p {
+    max-width: 560px;
+  }
 }
 
-
 /* =========================================================
-   TABLET / SMALL DESKTOP
-========================================================= */
+   TABLET
+   ========================================================= */
 
 @media (max-width: 800px) {
-
   .mht-footer {
     padding: 45px 20px 0;
   }
 
   .mht-footer__container {
-    grid-template-columns: 1fr 1fr;
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 35px 30px;
   }
 
@@ -438,15 +385,17 @@
     height: 98px;
   }
 
-  .mht-footer__brand p {
-    max-width: 540px;
+  .mht-footer__brand-title {
+    font-size: 19px;
+  }
 
+  .mht-footer__brand > p {
+    max-width: 540px;
     font-size: 14px;
   }
 
   .mht-footer h3 {
     margin-bottom: 17px;
-
     font-size: 13px;
   }
 
@@ -460,22 +409,18 @@
   }
 }
 
-
 /* =========================================================
    MOBILE
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 600px) {
-
   .mht-footer {
     padding: 42px 20px 0;
   }
 
   .mht-footer__container {
-    grid-template-columns: 1fr;
-
+    grid-template-columns: minmax(0, 1fr);
     gap: 32px;
-
     padding-bottom: 35px;
   }
 
@@ -483,50 +428,45 @@
     grid-column: auto;
   }
 
-
-  /* -----------------------------------------
-     LOGO
-  ----------------------------------------- */
+  /* Logo */
 
   .mht-footer__logo-wrap {
     width: 190px;
     height: 92px;
-
-    margin-bottom: 16px;
-
-    padding: 0;
+    margin-bottom: 14px;
   }
 
+  /* Company name */
 
-  /* -----------------------------------------
-     DESCRIPTION
-  ----------------------------------------- */
+  .mht-footer__brand-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
 
-  .mht-footer__brand p {
+  /* Description */
+
+  .mht-footer__brand > p {
     max-width: 100%;
-
     font-size: 14px;
-
     line-height: 1.65;
   }
 
+  /* GST */
 
-  /* -----------------------------------------
-     HEADINGS
-  ----------------------------------------- */
+  .mht-footer__gst {
+    margin-top: 13px;
+    font-size: 13px;
+  }
+
+  /* Headings */
 
   .mht-footer h3 {
     margin-bottom: 15px;
-
     font-size: 13px;
-
     letter-spacing: 2px;
   }
 
-
-  /* -----------------------------------------
-     LINKS
-  ----------------------------------------- */
+  /* Links */
 
   .mht-footer__column {
     gap: 11px;
@@ -537,45 +477,30 @@
     font-size: 14px;
   }
 
-
-  /* -----------------------------------------
-     CONTACT
-  ----------------------------------------- */
+  /* Contact */
 
   .mht-footer__contact-item {
     gap: 11px;
-
     margin-bottom: 13px;
-
     line-height: 1.5;
   }
 
   .mht-footer__contact-item svg {
     width: 19px;
     height: 19px;
-
     flex-basis: 19px;
   }
 
-
-  /* -----------------------------------------
-     CTA
-  ----------------------------------------- */
+  /* CTA */
 
   .mht-footer__cta {
     min-width: 165px;
-
     margin-top: 5px;
-
     padding: 11px 15px;
-
     font-size: 13px;
   }
 
-
-  /* -----------------------------------------
-     COPYRIGHT
-  ----------------------------------------- */
+  /* Copyright */
 
   .mht-footer__bottom {
     padding: 20px 0 22px;
@@ -583,56 +508,59 @@
 
   .mht-footer__bottom p {
     font-size: 12px;
-
     line-height: 1.5;
   }
 }
 
-
 /* =========================================================
    SMALL MOBILE
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 380px) {
-
   .mht-footer {
-    padding-left: 15px;
-
     padding-right: 15px;
+    padding-left: 15px;
   }
-
 
   .mht-footer__logo-wrap {
     width: 175px;
     height: 85px;
   }
 
+  .mht-footer__brand-title {
+    font-size: 17px;
+  }
 
-  .mht-footer__brand p {
+  .mht-footer__brand > p {
     font-size: 13px;
   }
 
+  .mht-footer__gst {
+    font-size: 12px;
+  }
 
   .mht-footer__column a,
   .mht-footer__contact-item {
     font-size: 13px;
   }
 
-
   .mht-footer__cta {
     min-width: 155px;
-
     font-size: 12.5px;
   }
 }
 
-
 /* =========================================================
    ACCESSIBILITY
-========================================================= */
+   ========================================================= */
+
+.mht-footer a:focus-visible {
+  outline: 2px solid #00a651;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
 
 @media (prefers-reduced-motion: reduce) {
-
   .mht-footer *,
   .mht-footer *::before,
   .mht-footer *::after {

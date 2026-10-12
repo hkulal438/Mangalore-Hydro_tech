@@ -11,22 +11,35 @@ const Footer = () => {
         {/* BRAND */}
 
         <div className="mht-footer__brand">
+          {/* Logo */}
           <div className="mht-footer__logo-wrap">
             <Link to="/#home" aria-label="Mangalore Hydro Tech Home">
               <img
                 src={logoImage}
-                alt="Mangalore Hydro Testing"
+                alt="Mangalore Hydro Tech Logo"
                 loading="lazy"
               />
             </Link>
           </div>
 
+          {/* Company Name */}
+          <h2 className="mht-footer__brand-title">
+            MANGALORE HYDRO TECH
+          </h2>
+
+          {/* Description */}
           <p>
             Professional CNG cylinder hydro testing, inspection,
             cleaning, maintenance and certification services in
             Mangaluru, Karnataka. Committed to safety, compliance
             and reliable service.
           </p>
+
+          {/* GST Number */}
+          <div className="mht-footer__gst">
+            <span>GSTIN:</span>
+            <strong>29ACGFM5479D1ZV</strong>
+          </div>
         </div>
 
         {/* COMPANY */}
@@ -42,8 +55,6 @@ const Footer = () => {
           <Link to="/#faq">FAQ</Link>
           <Link to="/#reviews">Reviews</Link>
           <Link to="/#contact">Contact</Link>
-
-          {/* PRIVACY POLICY */}
 
           <Link
             to="/privacy-policy"
@@ -142,7 +153,7 @@ const Footer = () => {
                 2.6-.5l1.9-1.9c.6-.6.6-1.6-.1-2.1
                 l-2.6-2.1c-.5-.4-1.2-.4-1.7-.1l-1.7
                 1.1c-2.2-1.2-4-3-5.2-5.2l1.1-1.7
-                c.3-.5.3-1.2-.1-1.7L8.7 3.6c-.5-.7-1.5-.7-2.1-.1Z"
+                c.3-.5-.1-1.2-.1-1.7L8.7 3.6c-.5-.7-1.5-.7-2.1-.1Z"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.7"
@@ -164,8 +175,7 @@ const Footer = () => {
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path
-                d="M12 2.5a9.5 9.5 0 0 0-8.2 14.25L3
-                21l4.4-1.15A9.5 9.5 0 1 0 12 2.5Z"
+                d="M12 2.5a9.5 9.5 0 0 0-8.2 14.25L3 21l4.4-1.15A9.5 9.5 0 1 0 12 2.5Z"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.7"
@@ -228,7 +238,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* BOTTOM COPYRIGHT */}
+      {/* COPYRIGHT */}
 
       <div className="mht-footer__bottom">
         <p>
