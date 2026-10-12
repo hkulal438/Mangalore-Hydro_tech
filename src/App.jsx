@@ -11,6 +11,9 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+// SEO Component
+import SEO from "./Components/SEO/SEO";
+
 // Website Components
 import Header from "./Components/Header/Header";
 import Hero from "./Components/Hero/Hero";
@@ -33,6 +36,12 @@ import Privacy from "./Components/Privacy/Privacy";
 function Home() {
   return (
     <>
+      <SEO
+        title="CNG Cylinder Hydro Testing in Mangaluru | Mangalore Hydro Tech"
+        description="Mangalore Hydro Tech provides CNG cylinder hydro testing, inspection, cleaning and maintenance services in Mangaluru, Karnataka."
+        canonical="https://mangalorehydrotech.com/"
+      />
+
       <Hero />
       <About />
       <Partnership />
@@ -58,7 +67,6 @@ function ScrollManager() {
 
   useEffect(() => {
     if (pathname !== "/") {
-      // Always open separate pages at the top.
       window.scrollTo({
         top: 0,
         left: 0,
@@ -78,7 +86,6 @@ function ScrollManager() {
 
     const sectionId = decodeURIComponent(hash.slice(1));
 
-    // Allow the homepage sections to render before scrolling.
     const frameId = requestAnimationFrame(() => {
       const section = document.getElementById(sectionId);
 
